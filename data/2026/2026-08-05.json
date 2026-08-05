@@ -1,7 +1,7 @@
 {
   "date": "2026-08-05",
-  "score": 22,
-  "score_precise": 21.519,
+  "score": 21,
+  "score_precise": 21.121,
   "zone": "Unfavorable",
   "version": "1.0",
   "pillars_used": 6,
@@ -28,15 +28,15 @@
     "real_rates": {
       "name": "real_rates",
       "available": true,
-      "subscore": 3.95,
-      "latest_date": "2026-08-03",
+      "subscore": 3.96,
+      "latest_date": "2026-08-04",
       "latest_value": 2.41,
       "unit": "%",
       "source": "TIPS 10Y (H.15)",
       "frequency": "daily",
-      "staleness_days": 2,
+      "staleness_days": 1,
       "stale_limit_days": 7,
-      "history_points": 5900,
+      "history_points": 5901,
       "publishable_raw": true,
       "notes": "Lower real rates historically preceded better long-term gold returns (EVIDENCE-BASE.md \u00a71). 2022+ regime break published separately.",
       "weight_nominal": 25,
@@ -47,7 +47,7 @@
     "entry_price": {
       "name": "entry_price",
       "available": true,
-      "subscore": 23.82,
+      "subscore": 22.01,
       "latest_date": "2026-07-31",
       "latest_value": 4073.0,
       "unit": "USD/toz (WB monthly)",
@@ -59,11 +59,11 @@
       "publishable_raw": true,
       "sub_signals": {
         "trend": {
-          "subscore": 46.82,
-          "dev_vs_12m_ma_pct": -2.54,
-          "return_12m_pct": 25.78,
+          "subscore": 43.2,
+          "dev_vs_12m_ma_pct": -1.1,
+          "return_12m_pct": 27.64,
           "ma_window": "12 months (monthly proxy for 200dma; daily gold history not in pipeline v1)",
-          "spot_used_usd_toz": 4201.19
+          "spot_used_usd_toz": 4263.08
         },
         "valuation": {
           "subscore": 0.82,
@@ -158,12 +158,12 @@
     "volatility": {
       "name": "volatility",
       "available": true,
-      "subscore": 11.82,
-      "percentile": 88.18,
-      "latest_date": "2026-08-04",
-      "staleness_days": 1,
+      "subscore": 11.83,
+      "percentile": 88.17,
+      "latest_date": "2026-08-05",
+      "staleness_days": 0,
       "stale_limit_days": 7,
-      "history_points": 4242,
+      "history_points": 4243,
       "source": "Cboe Gold Volatility Index (GVZ) \u2014 internal-only per DATA-RIGHTS.md",
       "frequency": "daily",
       "publishable_raw": false,
