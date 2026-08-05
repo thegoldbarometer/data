@@ -60,10 +60,10 @@
       "sub_signals": {
         "trend": {
           "subscore": 46.82,
-          "dev_vs_12m_ma_pct": -2.43,
-          "return_12m_pct": 25.93,
+          "dev_vs_12m_ma_pct": -2.54,
+          "return_12m_pct": 25.78,
           "ma_window": "12 months (monthly proxy for 200dma; daily gold history not in pipeline v1)",
-          "spot_used_usd_toz": 4205.98
+          "spot_used_usd_toz": 4201.19
         },
         "valuation": {
           "subscore": 0.82,
