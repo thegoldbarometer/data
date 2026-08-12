@@ -21,7 +21,8 @@ import random
 import statistics
 from pathlib import Path
 
-ROOT = Path.home() / "projects" / "thegoldbarometer"
+import os
+ROOT = Path(os.environ.get("TGB_DATA_DIR", str(Path.home() / "projects" / "thegoldbarometer")))
 OUT = ROOT / "data" / "backtest" / "uncertainty.json"
 
 random.seed(19710101)  # fixed: reruns must reproduce

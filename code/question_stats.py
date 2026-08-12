@@ -18,7 +18,8 @@ import statistics
 from datetime import date
 from pathlib import Path
 
-ROOT = Path.home() / "projects" / "thegoldbarometer"
+import os
+ROOT = Path(os.environ.get("TGB_DATA_DIR", str(Path.home() / "projects" / "thegoldbarometer")))
 OUT = ROOT / "data" / "backtest" / "question_stats.json"
 
 # ---------------------------------------------------------------- load

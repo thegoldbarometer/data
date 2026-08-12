@@ -918,19 +918,26 @@ def run_backtest(bundle: dict, verbose: bool = True) -> dict:
 # Output writers
 # ---------------------------------------------------------------------------
 
-def _round_stats(stats: dict, decimals_pct: int = 2) -> dict:
-    """Recursively round _percentile_summary dicts (values in return space)
-    for JSON legibility. Bounded to numeric leaves only."""
+def _round_stats(stats: dict, decimals_pct: int = 2, in_percent: bool = False) -> dict:
+    """Recursively round _percentile_summary dicts for JSON legibility.
+
+    Most summaries hold FRACTIONS and get scaled to percent here. The
+    lump/dca families are already stored in percent by build_band_stats:
+    scaling them again published a 7133.38% median (found by an external
+    replication, 2026-08-12). Keys ending in _pct pass through unscaled.
+    """
     if not isinstance(stats, dict):
         return stats
     if set(stats.keys()) >= {"median", "mean", "p10", "p90", "min", "max", "n"}:
+        scale = 1.0 if in_percent else 100.0
         return {
             **stats,
-            **{k: (round(v * 100, decimals_pct) if isinstance(v, (int, float)) else v)
+            **{k: (round(v * scale, decimals_pct) if isinstance(v, (int, float)) else v)
                for k, v in stats.items() if k in ("median", "mean", "p10", "p90", "min", "max")},
-            "unit": "percent (multiply raw by 100)",
+            "unit": "percent",
         }
-    return {k: _round_stats(v, decimals_pct) for k, v in stats.items()}
+    return {k: _round_stats(v, decimals_pct, in_percent or str(k).endswith("_pct"))
+            for k, v in stats.items()}
 
 
 def write_outputs(results: dict) -> None:
@@ -945,12 +952,12 @@ def write_outputs(results: dict) -> None:
                     "fwd_3y_nominal", "fwd_3y_real",
                     "fwd_5y_nominal", "fwd_5y_real",
                     "fwd_10y_nominal", "fwd_10y_real",
-                    "maxdd_1y", "maxdd_5y",
+                    "maxdd_1y", "maxdd_3y", "maxdd_5y", "maxdd_10y",
                     "dca_vs_lump_5y_diff_pct"])
         for r in results["monthly_rows"]:
             ps = r.get("pillar_scores", {})
 
-            def _pct(v, dec=4):
+            def _pct(v, dec=6):
                 return round(v, dec) if isinstance(v, (int, float)) else ""
 
             w.writerow([r["date"], r.get("score"), r.get("pillars_used"),
@@ -969,7 +976,9 @@ def write_outputs(results: dict) -> None:
                         _pct(r.get("fwd_10y_nominal")),
                         _pct(r.get("fwd_10y_real")),
                         _pct(r.get("maxdd_1y")),
+                        _pct(r.get("maxdd_3y")),
                         _pct(r.get("maxdd_5y")),
+                        _pct(r.get("maxdd_10y")),
                         _pct(r.get("dca_vs_lump_5y_diff_pct"), 4),
                         ])
 

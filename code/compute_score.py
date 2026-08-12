@@ -209,7 +209,17 @@ def pillar_real_rates(as_of: date, tips: list[tuple[date, float]],
     source = "TIPS 10Y (H.15)"
     frequency = "daily"
     stale_limit = STALENESS_LIMITS_DAYS["daily"]
-    if hit is None or (as_of - hit[1][0]).days > 365:
+    if hit is None:
+        # No TIPS at all: the monthly proxy is the designed pre-2003 path.
+        pass
+    elif (as_of - hit[1][0]).days > 365:
+        # A YEAR-stale TIPS must not silently swap the measure back to the
+        # proxy: the two differ by ~0.5pp in level, which once manufactured
+        # an 18-point sub-score step (seam audit 2026-08-12). An honest drop
+        # is the published behaviour for a silent source.
+        return {"name": label, "available": False,
+                "reason": f"TIPS silent for over a year ({(as_of - hit[1][0]).days}d)"}
+    if hit is None:
         # Pre-2003 → use monthly real-rate proxy (GS10 minus CPI YoY)
         hit_p = find_at_or_before(proxy, as_of)
         if hit_p is None:
@@ -315,7 +325,10 @@ def pillar_entry_price(as_of: date, wb_gold: list[tuple[date, float]],
     # 12-month return (t vs t-12)
     if len(prices) < 13:
         return {"name": label, "available": False, "reason": "no year-ago point"}
-    year_ago_value = prices[-13][1]
+    # With a live spot the current point is NOT prices[-1], so twelve months
+    # back is prices[-12]; the WB-fallback path keeps the exact 12-month gap
+    # via prices[-13] (wave-3 review, 2026-08-12).
+    year_ago_value = (prices[-12][1] if spot_now is not None else prices[-13][1])
     ret_12m = (price_for_trend - year_ago_value) / year_ago_value
 
     # Percentile within full history of the same signals (expanding window).
@@ -712,7 +725,6 @@ def pillar_premiums(as_of: date, premium_hist: list[dict]) -> dict:
         "source": "The Gold Barometer premium collector (7-dealer basket)",
         "frequency": "daily",
         "ramping": True,
-        "history_days": history_days,
         "min_history_days": MIN_HISTORY_POINTS_PREMIUMS,
             "latest_date": latest["date"].isoformat(),
             "latest_premium_pct": round(latest["median_premium_pct"], 3),
@@ -747,9 +759,15 @@ def resolve_premium_weight(as_of: date, premium_available: bool,
     """
     if not premium_available or premium_history_days < PREMIUM_RAMP_MIN_DAYS:
         return 0.0
-    if premium_history_days < PREMIUM_FULL_WEIGHT_DAYS:
-        return 5.0
-    return 10.0
+    # Continuous ramp (decided 2026-08-12, BEFORE first effect ~Nov 2026): a
+    # weight step of several points in one day would move the composite
+    # mechanically and could manufacture a zone change. The weight now grows
+    # by ~0.02/day: 0 -> 5 between day 90 and one year, 5 -> 10 between one
+    # and two years. Published on /methodology/ before taking effect.
+    d = premium_history_days
+    if d < PREMIUM_FULL_WEIGHT_DAYS:
+        return round(5.0 * (d - PREMIUM_RAMP_MIN_DAYS) / (PREMIUM_FULL_WEIGHT_DAYS - PREMIUM_RAMP_MIN_DAYS), 2)
+    return round(min(10.0, 5.0 + 5.0 * (d - PREMIUM_FULL_WEIGHT_DAYS) / 365.0), 2)
 
 
 def renormalize(nominal_weights: dict[str, float], available: dict[str, bool]) -> dict[str, float]:
@@ -955,10 +973,16 @@ def run_self_checks() -> dict:
     # 3) ramp logic
     checks["ramp_pre90"] = ("PASS"
         if resolve_premium_weight(date.today(), True, 30) == 0.0 else "FAIL")
-    checks["ramp_90_to_12m"] = ("PASS"
-        if resolve_premium_weight(date.today(), True, 100) == 5.0 else "FAIL")
-    checks["ramp_full"] = ("PASS"
-        if resolve_premium_weight(date.today(), True, 400) == 10.0 else "FAIL")
+    checks["ramp_90_boundary"] = ("PASS"
+        if resolve_premium_weight(date.today(), True, 90) == 0.0 else "FAIL")
+    checks["ramp_one_year"] = ("PASS"
+        if resolve_premium_weight(date.today(), True, 365) == 5.0 else "FAIL")
+    checks["ramp_two_years"] = ("PASS"
+        if resolve_premium_weight(date.today(), True, 730) == 10.0 else "FAIL")
+    checks["ramp_monotonic"] = ("PASS"
+        if all(resolve_premium_weight(date.today(), True, d)
+               <= resolve_premium_weight(date.today(), True, d + 1)
+               for d in range(88, 732)) else "FAIL")
     checks["ramp_unavailable"] = ("PASS"
         if resolve_premium_weight(date.today(), False, 400) == 0.0 else "FAIL")
 
@@ -1063,7 +1087,6 @@ def main():
     # write must never erase it again (it did until 2026-08-12, which made
     # the home page contradict the archive).
     all_rows = list(backfill)
-    seen_days = set()
     pub_dir = ROOT / "public-data" / "data"
     if pub_dir.exists():
         for f in sorted(pub_dir.glob("*/*.json")):
@@ -1072,7 +1095,13 @@ def main():
             except (OSError, json.JSONDecodeError):
                 continue
             d = rec.get("date")
-            if not d or d == latest["date"] or not rec.get("zone"):
+            sc = rec.get("score")
+            # The public archive is a writable surface (a bad manual commit
+            # would otherwise flow straight into the site every night):
+            # validate before trusting (wave-3 review, 2026-08-12).
+            if (not d or d == latest["date"] or d > latest["date"]
+                    or rec.get("zone") not in {z[2] for z in ZONES}
+                    or not isinstance(sc, int) or not (0 <= sc <= 100)):
                 continue
             all_rows.append({
                 "date": d,
@@ -1084,7 +1113,6 @@ def main():
                 "pillars_used": rec.get("pillars_used"),
                 "backfilled": False,
             })
-            seen_days.add(d)
     all_rows.append({**latest, "backfilled": False})
     all_rows.sort(key=lambda r: (r["date"], 0 if r.get("backfilled") else 1))
     deduped = {}
