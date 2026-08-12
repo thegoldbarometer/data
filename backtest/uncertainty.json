@@ -1,5 +1,5 @@
 {
-  "note": "Stationary bootstrap, mean block = horizon, 10000 draws, seed fixed. Computed by scripts/backtest/uncertainty.py. NOT yet published on the site.",
+  "note": "Stationary bootstrap, mean block = horizon, 10000 draws, seed fixed. Computed by scripts/backtest/uncertainty.py. Published on the site at /methodology/ section 8.",
   "record_months": 667,
   "zones": [
     {
