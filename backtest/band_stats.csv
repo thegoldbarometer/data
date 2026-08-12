@@ -1,0 +1,6 @@
+zone,band,n_months,median_fwd_1y_pct,median_fwd_3y_pct,median_fwd_5y_pct,median_fwd_10y_pct,median_fwd_1y_real_pct,median_fwd_5y_real_pct,median_maxdd_1y_pct,median_maxdd_5y_pct,hit_rate_1y_vs_all_median,median_lump_5y_pct,median_dca_5y_pct,median_dca_vs_lump_diff_pct
+Historically very favorable,80-100,0,,,,,,,,,,,,
+Favorable,60-79,110,5.8,40.46,71.33,153.01,4.16,48.53,-4.21,-5.34,50.0,71.33,58.2,-2.38
+Mixed,40-59,379,6.51,17.33,43.2,79.3,3.07,19.4,-3.75,-8.67,51.06,43.2,42.56,-2.83
+Unfavorable,20-39,151,3.43,-5.12,-0.25,3.35,-0.41,-15.76,-3.63,-18.86,46.48,-0.25,4.73,0.3
+Historically very unfavorable,0-19,27,9.67,-1.01,9.21,-5.63,5.09,-7.7,-5.97,-17.69,51.85,9.21,13.51,-3.11

@@ -1,0 +1,6 @@
+zone,band,n_months,opportunity_cost_selling_median_1y_pct,opportunity_cost_selling_median_3y_pct,drawdown_avoided_selling_median_1y_pct,drawdown_avoided_selling_median_3y_pct,median_maxdd_avoided_selling_1y_pct
+Historically very favorable,80-100,0,,,,,
+Favorable,60-79,110,5.8,40.46,0.0,0.0,4.21
+Mixed,40-59,379,6.51,17.33,0.0,0.0,3.75
+Unfavorable,20-39,151,3.43,0.0,0.0,5.12,3.63
+Historically very unfavorable,0-19,27,9.67,0.0,0.0,1.01,5.97

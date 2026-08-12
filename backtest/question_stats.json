@@ -1,0 +1,218 @@
+{
+  "note": "Computed by scripts/backtest/question_stats.py from monthly_scores.csv and wb_gold_usd_toz.csv. All figures in percent. Nominal unless the key says real.",
+  "record_months": 667,
+  "first_month": "1971-01-31",
+  "last_month": "2026-07-31",
+  "wait": {
+    "better_means": "score of 40 or higher (Mixed or better)",
+    "zones": [
+      {
+        "zone": "Unfavorable",
+        "band": "20-39",
+        "n_months": 151,
+        "n_reached_better": 146,
+        "median_wait_months": 14.0,
+        "median_price_change_while_waiting_pct": 2.4,
+        "share_reached_within_1y_pct": 45.0,
+        "share_reached_within_5y_pct": 81.7,
+        "n_with_full_5y_window": 126
+      },
+      {
+        "zone": "Historically very unfavorable",
+        "band": "0-19",
+        "n_months": 27,
+        "n_reached_better": 27,
+        "median_wait_months": 28.0,
+        "median_price_change_while_waiting_pct": -3.2,
+        "share_reached_within_1y_pct": 40.7,
+        "share_reached_within_5y_pct": 55.6,
+        "n_with_full_5y_window": 27
+      }
+    ]
+  },
+  "record_highs": {
+    "threshold_pct": 5,
+    "near_record": {
+      "n_months": 164,
+      "median_fwd_1y_nominal_pct": 28.8,
+      "median_fwd_5y_nominal_pct": 71.8,
+      "median_fwd_5y_real_pct": 28.6,
+      "median_worst_fall_5y_pct": -3.5
+    },
+    "away_from_record": {
+      "n_months": 503,
+      "median_fwd_1y_nominal_pct": 1.8,
+      "median_fwd_5y_nominal_pct": 24.8,
+      "median_fwd_5y_real_pct": 7.7,
+      "median_worst_fall_5y_pct": -10.5
+    }
+  },
+  "seasonality": {
+    "months": [
+      {
+        "month": 1,
+        "name": "January",
+        "n": 55,
+        "median_mom_pct": 1.6,
+        "share_positive_pct": 65.5
+      },
+      {
+        "month": 2,
+        "name": "February",
+        "n": 56,
+        "median_mom_pct": 1.0,
+        "share_positive_pct": 53.6
+      },
+      {
+        "month": 3,
+        "name": "March",
+        "n": 56,
+        "median_mom_pct": 0.2,
+        "share_positive_pct": 50.0
+      },
+      {
+        "month": 4,
+        "name": "April",
+        "n": 56,
+        "median_mom_pct": -0.6,
+        "share_positive_pct": 44.6
+      },
+      {
+        "month": 5,
+        "name": "May",
+        "n": 56,
+        "median_mom_pct": -0.3,
+        "share_positive_pct": 39.3
+      },
+      {
+        "month": 6,
+        "name": "June",
+        "n": 56,
+        "median_mom_pct": 0.0,
+        "share_positive_pct": 46.4
+      },
+      {
+        "month": 7,
+        "name": "July",
+        "n": 56,
+        "median_mom_pct": 0.0,
+        "share_positive_pct": 48.2
+      },
+      {
+        "month": 8,
+        "name": "August",
+        "n": 55,
+        "median_mom_pct": 0.8,
+        "share_positive_pct": 56.4
+      },
+      {
+        "month": 9,
+        "name": "September",
+        "n": 55,
+        "median_mom_pct": 0.0,
+        "share_positive_pct": 49.1
+      },
+      {
+        "month": 10,
+        "name": "October",
+        "n": 55,
+        "median_mom_pct": 0.0,
+        "share_positive_pct": 49.1
+      },
+      {
+        "month": 11,
+        "name": "November",
+        "n": 55,
+        "median_mom_pct": 0.0,
+        "share_positive_pct": 47.3
+      },
+      {
+        "month": 12,
+        "name": "December",
+        "n": 55,
+        "median_mom_pct": 0.3,
+        "share_positive_pct": 50.9
+      }
+    ],
+    "best": {
+      "month": 1,
+      "name": "January",
+      "n": 55,
+      "median_mom_pct": 1.6,
+      "share_positive_pct": 65.5
+    },
+    "worst": {
+      "month": 4,
+      "name": "April",
+      "n": 56,
+      "median_mom_pct": -0.6,
+      "share_positive_pct": 44.6
+    },
+    "spread_pct": 2.2
+  },
+  "deep_falls": {
+    "threshold_pct": 20,
+    "n_episodes": 5,
+    "episodes": [
+      {
+        "peak_month": "1973-06-30",
+        "cross_month": "1973-11-30",
+        "trough_month": "1973-11-30",
+        "recovered_month": "1974-01-31",
+        "depth_pct": -20.8,
+        "further_fall_after_cross_pct": 0.0,
+        "months_cross_to_trough": 0,
+        "fwd_from_cross_1y_pct": 91.6,
+        "fwd_from_cross_5y_pct": 116.8
+      },
+      {
+        "peak_month": "1974-12-31",
+        "cross_month": "1975-09-30",
+        "trough_month": "1976-08-31",
+        "recovered_month": "1978-03-31",
+        "depth_pct": -40.2,
+        "further_fall_after_cross_pct": -23.6,
+        "months_cross_to_trough": 11,
+        "fwd_from_cross_1y_pct": -20.8,
+        "fwd_from_cross_5y_pct": 368.1
+      },
+      {
+        "peak_month": "1980-01-31",
+        "cross_month": "1980-04-30",
+        "trough_month": "1999-07-31",
+        "recovered_month": "2006-05-31",
+        "depth_pct": -62.1,
+        "further_fall_after_cross_pct": -50.5,
+        "months_cross_to_trough": 231,
+        "fwd_from_cross_1y_pct": -4.1,
+        "fwd_from_cross_5y_pct": -36.8
+      },
+      {
+        "peak_month": "2008-03-31",
+        "cross_month": "2008-11-30",
+        "trough_month": "2008-11-30",
+        "recovered_month": "2009-09-30",
+        "depth_pct": -21.4,
+        "further_fall_after_cross_pct": 0.0,
+        "months_cross_to_trough": 0,
+        "fwd_from_cross_1y_pct": 48.1,
+        "fwd_from_cross_5y_pct": 67.7
+      },
+      {
+        "peak_month": "2011-09-30",
+        "cross_month": "2013-05-31",
+        "trough_month": "2015-12-31",
+        "recovered_month": "2020-07-31",
+        "depth_pct": -39.3,
+        "further_fall_after_cross_pct": -23.9,
+        "months_cross_to_trough": 31,
+        "fwd_from_cross_1y_pct": -8.8,
+        "fwd_from_cross_5y_pct": -7.9
+      }
+    ],
+    "median_further_fall_after_cross_pct": -23.6,
+    "median_months_cross_to_trough": 11.0,
+    "median_fwd_from_cross_1y_pct": -4.1,
+    "median_fwd_from_cross_5y_pct": 67.7
+  }
+}

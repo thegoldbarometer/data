@@ -1,0 +1,642 @@
+{
+  "note": "Stationary bootstrap, mean block = horizon, 10000 draws, seed fixed. Computed by scripts/backtest/uncertainty.py. NOT yet published on the site.",
+  "record_months": 667,
+  "zones": [
+    {
+      "zone": "Favorable",
+      "n_months": 110,
+      "n_episodes": 27,
+      "episodes": [
+        {
+          "from": "1971-01",
+          "to": "1971-05",
+          "months": 5
+        },
+        {
+          "from": "1973-12",
+          "to": "1973-12",
+          "months": 1
+        },
+        {
+          "from": "1974-08",
+          "to": "1974-08",
+          "months": 1
+        },
+        {
+          "from": "1974-10",
+          "to": "1974-10",
+          "months": 1
+        },
+        {
+          "from": "1975-02",
+          "to": "1975-02",
+          "months": 1
+        },
+        {
+          "from": "1975-05",
+          "to": "1976-03",
+          "months": 11
+        },
+        {
+          "from": "1981-02",
+          "to": "1981-02",
+          "months": 1
+        },
+        {
+          "from": "1991-01",
+          "to": "1991-01",
+          "months": 1
+        },
+        {
+          "from": "2000-04",
+          "to": "2000-04",
+          "months": 1
+        },
+        {
+          "from": "2000-09",
+          "to": "2001-09",
+          "months": 13
+        },
+        {
+          "from": "2002-12",
+          "to": "2003-01",
+          "months": 2
+        },
+        {
+          "from": "2003-03",
+          "to": "2003-08",
+          "months": 6
+        },
+        {
+          "from": "2005-03",
+          "to": "2005-11",
+          "months": 9
+        },
+        {
+          "from": "2009-02",
+          "to": "2009-02",
+          "months": 1
+        },
+        {
+          "from": "2009-04",
+          "to": "2009-05",
+          "months": 2
+        },
+        {
+          "from": "2012-05",
+          "to": "2012-10",
+          "months": 6
+        },
+        {
+          "from": "2012-12",
+          "to": "2014-01",
+          "months": 14
+        },
+        {
+          "from": "2014-04",
+          "to": "2014-10",
+          "months": 7
+        },
+        {
+          "from": "2015-03",
+          "to": "2015-06",
+          "months": 4
+        },
+        {
+          "from": "2015-08",
+          "to": "2016-01",
+          "months": 6
+        },
+        {
+          "from": "2017-01",
+          "to": "2017-02",
+          "months": 2
+        },
+        {
+          "from": "2017-06",
+          "to": "2017-07",
+          "months": 2
+        },
+        {
+          "from": "2017-12",
+          "to": "2017-12",
+          "months": 1
+        },
+        {
+          "from": "2018-04",
+          "to": "2018-11",
+          "months": 8
+        },
+        {
+          "from": "2019-01",
+          "to": "2019-01",
+          "months": 1
+        },
+        {
+          "from": "2019-04",
+          "to": "2019-05",
+          "months": 2
+        },
+        {
+          "from": "2021-04",
+          "to": "2021-04",
+          "months": 1
+        }
+      ],
+      "horizons": [
+        {
+          "horizon": "1y nominal",
+          "n_months_with_data": 110,
+          "n_nonoverlapping_windows": 9.17,
+          "median_pct": 5.8,
+          "ci90_pct": [
+            -4.2,
+            13.7
+          ]
+        },
+        {
+          "horizon": "5y nominal",
+          "n_months_with_data": 110,
+          "n_nonoverlapping_windows": 1.83,
+          "median_pct": 71.3,
+          "ci90_pct": [
+            38.8,
+            136.6
+          ]
+        },
+        {
+          "horizon": "5y real",
+          "n_months_with_data": 110,
+          "n_nonoverlapping_windows": 1.83,
+          "median_pct": 48.5,
+          "ci90_pct": [
+            23.5,
+            102.6
+          ]
+        }
+      ]
+    },
+    {
+      "zone": "Mixed",
+      "n_months": 379,
+      "n_episodes": 43,
+      "episodes": [
+        {
+          "from": "1971-06",
+          "to": "1971-12",
+          "months": 7
+        },
+        {
+          "from": "1973-05",
+          "to": "1973-11",
+          "months": 7
+        },
+        {
+          "from": "1974-01",
+          "to": "1974-07",
+          "months": 7
+        },
+        {
+          "from": "1974-09",
+          "to": "1974-09",
+          "months": 1
+        },
+        {
+          "from": "1974-11",
+          "to": "1975-01",
+          "months": 3
+        },
+        {
+          "from": "1975-03",
+          "to": "1975-04",
+          "months": 2
+        },
+        {
+          "from": "1976-04",
+          "to": "1978-02",
+          "months": 23
+        },
+        {
+          "from": "1978-05",
+          "to": "1981-01",
+          "months": 33
+        },
+        {
+          "from": "1981-03",
+          "to": "1981-03",
+          "months": 1
+        },
+        {
+          "from": "1989-03",
+          "to": "1989-11",
+          "months": 9
+        },
+        {
+          "from": "1990-05",
+          "to": "1990-08",
+          "months": 4
+        },
+        {
+          "from": "1990-10",
+          "to": "1990-12",
+          "months": 3
+        },
+        {
+          "from": "1991-02",
+          "to": "1991-06",
+          "months": 5
+        },
+        {
+          "from": "1991-09",
+          "to": "1991-10",
+          "months": 2
+        },
+        {
+          "from": "1991-12",
+          "to": "1993-07",
+          "months": 20
+        },
+        {
+          "from": "1993-09",
+          "to": "1994-01",
+          "months": 5
+        },
+        {
+          "from": "1995-04",
+          "to": "1995-04",
+          "months": 1
+        },
+        {
+          "from": "1995-06",
+          "to": "1996-03",
+          "months": 10
+        },
+        {
+          "from": "1996-07",
+          "to": "2000-03",
+          "months": 45
+        },
+        {
+          "from": "2000-05",
+          "to": "2000-08",
+          "months": 4
+        },
+        {
+          "from": "2001-10",
+          "to": "2002-02",
+          "months": 5
+        },
+        {
+          "from": "2002-08",
+          "to": "2002-11",
+          "months": 4
+        },
+        {
+          "from": "2003-02",
+          "to": "2003-02",
+          "months": 1
+        },
+        {
+          "from": "2003-09",
+          "to": "2003-11",
+          "months": 3
+        },
+        {
+          "from": "2004-02",
+          "to": "2005-02",
+          "months": 13
+        },
+        {
+          "from": "2005-12",
+          "to": "2006-02",
+          "months": 3
+        },
+        {
+          "from": "2006-08",
+          "to": "2009-01",
+          "months": 30
+        },
+        {
+          "from": "2009-03",
+          "to": "2009-03",
+          "months": 1
+        },
+        {
+          "from": "2009-06",
+          "to": "2012-04",
+          "months": 35
+        },
+        {
+          "from": "2012-11",
+          "to": "2012-11",
+          "months": 1
+        },
+        {
+          "from": "2014-02",
+          "to": "2014-03",
+          "months": 2
+        },
+        {
+          "from": "2014-11",
+          "to": "2015-02",
+          "months": 4
+        },
+        {
+          "from": "2015-07",
+          "to": "2015-07",
+          "months": 1
+        },
+        {
+          "from": "2016-02",
+          "to": "2016-12",
+          "months": 11
+        },
+        {
+          "from": "2017-03",
+          "to": "2017-05",
+          "months": 3
+        },
+        {
+          "from": "2017-08",
+          "to": "2017-11",
+          "months": 4
+        },
+        {
+          "from": "2018-01",
+          "to": "2018-03",
+          "months": 3
+        },
+        {
+          "from": "2018-12",
+          "to": "2018-12",
+          "months": 1
+        },
+        {
+          "from": "2019-02",
+          "to": "2019-03",
+          "months": 2
+        },
+        {
+          "from": "2019-06",
+          "to": "2021-03",
+          "months": 22
+        },
+        {
+          "from": "2021-05",
+          "to": "2024-03",
+          "months": 35
+        },
+        {
+          "from": "2025-09",
+          "to": "2025-10",
+          "months": 2
+        },
+        {
+          "from": "2026-02",
+          "to": "2026-02",
+          "months": 1
+        }
+      ],
+      "horizons": [
+        {
+          "horizon": "1y nominal",
+          "n_months_with_data": 376,
+          "n_nonoverlapping_windows": 31.33,
+          "median_pct": 6.5,
+          "ci90_pct": [
+            0.5,
+            15.5
+          ]
+        },
+        {
+          "horizon": "5y nominal",
+          "n_months_with_data": 344,
+          "n_nonoverlapping_windows": 5.73,
+          "median_pct": 43.2,
+          "ci90_pct": [
+            4.3,
+            79.9
+          ]
+        },
+        {
+          "horizon": "5y real",
+          "n_months_with_data": 342,
+          "n_nonoverlapping_windows": 5.7,
+          "median_pct": 19.4,
+          "ci90_pct": [
+            -10.8,
+            40.6
+          ]
+        }
+      ]
+    },
+    {
+      "zone": "Unfavorable",
+      "n_months": 151,
+      "n_episodes": 21,
+      "episodes": [
+        {
+          "from": "1972-01",
+          "to": "1972-04",
+          "months": 4
+        },
+        {
+          "from": "1973-04",
+          "to": "1973-04",
+          "months": 1
+        },
+        {
+          "from": "1978-03",
+          "to": "1978-04",
+          "months": 2
+        },
+        {
+          "from": "1981-04",
+          "to": "1982-09",
+          "months": 18
+        },
+        {
+          "from": "1983-10",
+          "to": "1986-09",
+          "months": 36
+        },
+        {
+          "from": "1987-01",
+          "to": "1987-05",
+          "months": 5
+        },
+        {
+          "from": "1987-07",
+          "to": "1989-02",
+          "months": 20
+        },
+        {
+          "from": "1989-12",
+          "to": "1990-04",
+          "months": 5
+        },
+        {
+          "from": "1990-09",
+          "to": "1990-09",
+          "months": 1
+        },
+        {
+          "from": "1991-07",
+          "to": "1991-08",
+          "months": 2
+        },
+        {
+          "from": "1991-11",
+          "to": "1991-11",
+          "months": 1
+        },
+        {
+          "from": "1993-08",
+          "to": "1993-08",
+          "months": 1
+        },
+        {
+          "from": "1994-02",
+          "to": "1995-03",
+          "months": 14
+        },
+        {
+          "from": "1995-05",
+          "to": "1995-05",
+          "months": 1
+        },
+        {
+          "from": "1996-04",
+          "to": "1996-06",
+          "months": 3
+        },
+        {
+          "from": "2002-03",
+          "to": "2002-07",
+          "months": 5
+        },
+        {
+          "from": "2003-12",
+          "to": "2004-01",
+          "months": 2
+        },
+        {
+          "from": "2006-03",
+          "to": "2006-07",
+          "months": 5
+        },
+        {
+          "from": "2024-04",
+          "to": "2025-08",
+          "months": 17
+        },
+        {
+          "from": "2025-11",
+          "to": "2026-01",
+          "months": 3
+        },
+        {
+          "from": "2026-03",
+          "to": "2026-07",
+          "months": 5
+        }
+      ],
+      "horizons": [
+        {
+          "horizon": "1y nominal",
+          "n_months_with_data": 142,
+          "n_nonoverlapping_windows": 11.83,
+          "median_pct": 3.4,
+          "ci90_pct": [
+            -3.6,
+            14.4
+          ]
+        },
+        {
+          "horizon": "5y nominal",
+          "n_months_with_data": 126,
+          "n_nonoverlapping_windows": 2.1,
+          "median_pct": -0.2,
+          "ci90_pct": [
+            -11.3,
+            8.0
+          ]
+        },
+        {
+          "horizon": "5y real",
+          "n_months_with_data": 126,
+          "n_nonoverlapping_windows": 2.1,
+          "median_pct": -15.8,
+          "ci90_pct": [
+            -27.7,
+            -9.2
+          ]
+        }
+      ]
+    },
+    {
+      "zone": "Historically very unfavorable",
+      "n_months": 27,
+      "n_episodes": 4,
+      "episodes": [
+        {
+          "from": "1972-05",
+          "to": "1973-03",
+          "months": 11
+        },
+        {
+          "from": "1982-10",
+          "to": "1983-09",
+          "months": 12
+        },
+        {
+          "from": "1986-10",
+          "to": "1986-12",
+          "months": 3
+        },
+        {
+          "from": "1987-06",
+          "to": "1987-06",
+          "months": 1
+        }
+      ],
+      "horizons": [
+        {
+          "horizon": "1y nominal",
+          "n_months_with_data": 27,
+          "n_nonoverlapping_windows": 2.25,
+          "median_pct": 9.7,
+          "ci90_pct": [
+            -12.0,
+            58.5
+          ]
+        },
+        {
+          "horizon": "5y nominal",
+          "n_months_with_data": 27,
+          "n_nonoverlapping_windows": 0.45,
+          "median_pct": 9.2,
+          "ci90_pct": null,
+          "ci_note": "fewer months than one horizon: under one independent observation"
+        },
+        {
+          "horizon": "5y real",
+          "n_months_with_data": 27,
+          "n_nonoverlapping_windows": 0.45,
+          "median_pct": -7.7,
+          "ci90_pct": null,
+          "ci_note": "fewer months than one horizon: under one independent observation"
+        }
+      ]
+    }
+  ],
+  "spread_5y_real": {
+    "what": "Favorable minus Unfavorable, median 5y real",
+    "point_pct": 64.3,
+    "ci90_pct": [
+      37.0,
+      119.2
+    ],
+    "share_of_draws_positive_pct": 100.0
+  }
+}
