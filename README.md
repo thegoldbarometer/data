@@ -22,3 +22,12 @@ Dual license: data = CC BY 4.0 (attribution "The Gold Barometer, thegoldbaromete
   (`monthly_scores.csv`, one row per month with sub-scores and forward
   returns) and every published table derived from it. Refreshed at each
   regeneration, with the change logged at /corrections/ on the site.
+
+## Restatements
+
+A published reading is never rewritten. When an engine fault is corrected,
+each affected daily record receives an additive `restated` block carrying the
+corrected value, the engine build, and the restatement date. The original
+fields stay untouched, so both values can be audited side by side. Charts on
+the site prefer the restated value. Every restatement is logged on the site
+at /corrections/.
