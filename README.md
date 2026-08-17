@@ -10,7 +10,7 @@ Each day this repository receives one commit with the day's reading: composite s
 
 ## Licensing
 
-Dual license: data = CC BY 4.0 (attribution "The Gold Barometer, thegoldbarometer.com" — see LICENSE-DATA.md), code = MIT (see LICENSE).
+Dual license: data = CC BY 4.0 (attribution "The Gold Barometer, thegoldbarometer.com" — see LICENSE-DATA.md), code = MIT (see LICENSE-CODE.md).
 
 ## Code and backtest
 
