@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
-"""compute_score.py — The Gold Barometer daily score engine v1.0.
+"""compute_score.py - The Gold Barometer daily score engine v1.0.
 
 Implements docs/DESIGN.md section 1 exactly. Reads canonical historical
 series from data/history/ (built by scripts/pipeline/build_history.py),
 plus daily premium data from data/premiums/*.jsonl, and produces:
 
-  data/output/latest.json    — today's composite + full breakdown
-  data/output/history.json   — composite time-series (backfilled monthly)
-  data/output/history.csv    — same, tabular
-  data/output/checks.json    — unit-style self-test results
+  data/output/latest.json    - today's composite + full breakdown
+  data/output/history.json   - composite time-series (backfilled monthly)
+  data/output/history.csv    - same, tabular
+  data/output/checks.json    - unit-style self-test results
 
 DATA-RIGHTS constraint: raw GVZ values are NEVER included in any output.
 """
@@ -73,7 +73,7 @@ EVIDENCE_GRADES = {
     "structural_demand": "strong for central banks, weak for ETF flows",
     "dollar": "moderate (numeraire caveat)",
     "positioning": "weak-to-moderate (contrarian at extremes only)",
-    "volatility": "weak — risk/entry-quality gauge with no predictive claim",
+    "volatility": "weak - risk/entry-quality gauge with no predictive claim",
     "premiums": "cost argument incontestable; predictive value anecdotal",
 }
 
@@ -194,7 +194,7 @@ def cap_subscore(x: float) -> float:
 
 
 # ---------------------------------------------------------------------------
-# Pillar 1 — Real rates (DESIGN 1.2 #1; EVIDENCE-BASE §1)
+# Pillar 1 - Real rates (DESIGN 1.2 #1; EVIDENCE-BASE §1)
 # Orientation: LOW real rates historically preceded better long-term gold
 # returns (Erb & Harvey 2013; Chicago Fed Letter 464). Percentile → INVERT.
 # 2022+ regime break disclosed on /methodology/, not curve-fitted here.
@@ -270,7 +270,7 @@ def pillar_real_rates(as_of: date, tips: list[tuple[date, float]],
 
 
 # ---------------------------------------------------------------------------
-# Pillar 2 — Entry price (DESIGN 1.2 #2; EVIDENCE-BASE §2)
+# Pillar 2 - Entry price (DESIGN 1.2 #2; EVIDENCE-BASE §2)
 # Two sub-signals averaged AND stored separately:
 #   (a) Trend: price vs 12-month moving average (proxy for 200dma at the
 #       monthly cadence of WB Pink Sheet) + 12-month return.
@@ -390,7 +390,7 @@ def pillar_entry_price(as_of: date, wb_gold: list[tuple[date, float]],
 
 
 # ---------------------------------------------------------------------------
-# Pillar 3 — Structural demand (DESIGN 1.2 #3; EVIDENCE-BASE §3)
+# Pillar 3 - Structural demand (DESIGN 1.2 #3; EVIDENCE-BASE §3)
 # Average of two components computed separately:
 #   (a) Central-bank reserves: 12-month change of sum-of-reporters
 #       (IMF IRFCL, fine troy ounces). Orientation: net accumulation → HIGH.
@@ -490,7 +490,7 @@ def _twelve_month_change_pct_pillar(rows: list[tuple[date, float]], as_of: date,
 
 
 # ---------------------------------------------------------------------------
-# Pillar 4 — Dollar (DESIGN 1.2 #4; EVIDENCE-BASE §4)
+# Pillar 4 - Dollar (DESIGN 1.2 #4; EVIDENCE-BASE §4)
 # H.10 broad dollar: percentile of LEVEL + percentile of 12m change.
 # Orientation: strong / rising dollar = HEADWIND for gold → INVERT both.
 # Numeraire caveat (Pukthuanthong–Roll) published on /methodology/.
@@ -542,7 +542,7 @@ def pillar_dollar(as_of: date, dollar: list[tuple[date, float]]) -> dict:
 
 
 # ---------------------------------------------------------------------------
-# Pillar 5 — Positioning (DESIGN 1.2 #5; EVIDENCE-BASE §5)
+# Pillar 5 - Positioning (DESIGN 1.2 #5; EVIDENCE-BASE §5)
 # COT managed-money net length as % of open interest (Socrata 088691).
 # Framing: contrarian at extremes only (crowded long = fragility; washed-out
 # short = better forward entry). Sub-score = 100 – percentile (monotonic
@@ -578,7 +578,7 @@ def pillar_positioning(as_of: date, cot_pct_oi: list[tuple[date, float]]) -> dic
 
 
 # ---------------------------------------------------------------------------
-# Pillar 6 — Volatility (DESIGN 1.2 #6; EVIDENCE-BASE §6; DATA-RIGHTS Yellow)
+# Pillar 6 - Volatility (DESIGN 1.2 #6; EVIDENCE-BASE §6; DATA-RIGHTS Yellow)
 # Cboe GVZ percentile. Orientation: high implied vol = LOW sub-score
 # (framed as risk / entry-quality gauge, no predictive claim).
 # HARD CONSTRAINT (DATA-RIGHTS.md): the transformation must be non-reversible
@@ -614,7 +614,7 @@ def pillar_volatility(as_of: date, gvz: list[tuple[date, float]]) -> dict:
         "staleness_days": stale,
         "stale_limit_days": STALENESS_LIMITS_DAYS["daily"],
         "history_points": len(dist),
-        "source": "Cboe Gold Volatility Index (GVZ) — internal-only per DATA-RIGHTS.md",
+        "source": "Cboe Gold Volatility Index (GVZ) - internal-only per DATA-RIGHTS.md",
         "frequency": "daily",
         "publishable_raw": False,
         "notes": "Percentile rank is non-reversible without our full internal history "
@@ -623,19 +623,43 @@ def pillar_volatility(as_of: date, gvz: list[tuple[date, float]]) -> dict:
 
 
 # ---------------------------------------------------------------------------
-# Pillar 7 — Retail premiums (DESIGN 1.2 #7; EVIDENCE-BASE §7)
+# Pillar 7 - Retail premiums (DESIGN 1.2 #7; EVIDENCE-BASE §7)
 # Own daily data collected by scripts/collect_premiums.js since 2026-08-04.
 # For v1 we parse SD Bullion records (JM Bullion + APMEX blocked as of
-# 2026-08-04 — stealth layer TODO). Premium % = median across products of
+# 2026-08-04 - stealth layer TODO). Premium % = median across products of
 # (product_price − spot) / spot × 100. Daily percentile rank (once we have
 # enough history) → INVERT (high premium = mechanically worse all-in price).
 # Ramp per task spec: <90d = drop (weight redistributed); 90d–12mo = 5% weight;
 # ≥12mo = 10% weight. Predictive claim NOT made (cost argument only).
 # ---------------------------------------------------------------------------
 
+def _load_real_spot() -> dict[str, float]:
+    """metals.dev licensed spot by ISO day, for the premium denominator. The
+    collector's GC=F number is a FUTURES price: it runs 0.5-1.9% above spot
+    (measured 2026-08-05..11) and belongs in the meta as a cross-check, never
+    in the denominator (data-quality audit, 2026-08-12)."""
+    out: dict[str, float] = {}
+    p = ROOT / "data" / "series" / "spot_usd_toz.csv"
+    if p.exists():
+        for line in p.read_text().splitlines()[1:]:
+            parts = line.split(",")
+            if len(parts) >= 2:
+                try:
+                    out[parts[0][:10]] = float(parts[1])
+                except ValueError:
+                    pass
+    return out
+
+
+_REAL_SPOT_CACHE: dict[str, float] | None = None
+
+
 def _parse_premium_day(path: Path) -> dict | None:
     """Parse one daily JSONL file and return {date, median_premium_pct,
-    products_used, spot_usd_toz} or None if unparsable."""
+    products_used, denominator info} or None if unparsable."""
+    global _REAL_SPOT_CACHE
+    if _REAL_SPOT_CACHE is None:
+        _REAL_SPOT_CACHE = _load_real_spot()
     meta_spot: float | None = None
     per_product_pct: dict[str, list[float]] = defaultdict(list)
     if not path.exists():
@@ -677,15 +701,28 @@ def _parse_premium_day(path: Path) -> dict | None:
         return None
     if not per_product_pct:
         return None
+    # meta_spot held GC=F during the loop for the price band; the day's
+    # premium is re-based on the real spot when it exists.
+    day_key = path.stem
+    real = _REAL_SPOT_CACHE.get(day_key)
+    denominator = "spot" if real else "gcf_fallback"
     # For each product, keep the MEDIAN of the day's captures (multiple runs).
     per_product_median = [_median(v) for v in per_product_pct.values()]
     day_median = _median(per_product_median)
     d = date.fromisoformat(path.stem)
+    if real and meta_spot:
+        # prices were banded against GC=F; re-express the median premium
+        # against the real spot: (1+p_gcf)*gcf/spot - 1, applied at the
+        # aggregate (identical products, same factor).
+        factor = meta_spot / real
+        day_median = ((1 + day_median / 100.0) * factor - 1.0) * 100.0
     return {
         "date": d,
         "median_premium_pct": day_median,
         "products_used": len(per_product_median),
-        "spot_usd_toz": meta_spot,
+        "denominator": denominator,
+        "spot_used_usd_toz": real if real else meta_spot,
+        "futures_gcf_usd_toz": meta_spot,
     }
 
 
@@ -890,7 +927,7 @@ def compute_composite(as_of: date, bundle: dict, spot_now: float | None = None,
 
 
 # ---------------------------------------------------------------------------
-# Backfill (monthly cadence) — engine output, distinct from step-4 backtest
+# Backfill (monthly cadence) - engine output, distinct from step-4 backtest
 # ---------------------------------------------------------------------------
 
 def month_ends(start: date, end: date) -> list[date]:
@@ -1044,7 +1081,7 @@ def render_breakdown_table(latest: dict) -> str:
             latest_date = p.get("latest_date", "n/a")
             stale = f"{p.get('staleness_days', '?')}d"
         else:
-            sub = "— (dropped)"
+            sub = "- (dropped)"
             latest_date = p.get("latest_date", "n/a")
             stale = p.get("reason", "n/a")
         wn = p.get("weight_nominal", 0)
@@ -1055,12 +1092,15 @@ def render_breakdown_table(latest: dict) -> str:
 
 
 def main():
-    today = date.today()
+    # TGB_AS_OF: restatement/replay tooling (scripts/audit/restate_daily_2026_08.py)
+    # runs the engine as of a past date against inputs truncated to that date.
+    today = (date.fromisoformat(os.environ["TGB_AS_OF"])
+             if os.environ.get("TGB_AS_OF") else date.today())
     bundle = load_bundle()
     spot_now = load_todays_spot()
     premium_history = _load_premium_history()
 
-    print(f"compute_score.py v{VERSION} — as of {today.isoformat()}")
+    print(f"compute_score.py v{VERSION} - as of {today.isoformat()}")
     print(f"  Loaded {sum(len(v) for v in bundle.values())} series rows "
           f"across {len(bundle)} inputs")
     print(f"  Live spot (internal fallback): {spot_now}")
@@ -1070,7 +1110,7 @@ def main():
                                premium_history=premium_history)
 
     print()
-    print(f"  COMPOSITE: {latest['score']}/100 ({latest['zone']}) — "
+    print(f"  COMPOSITE: {latest['score']}/100 ({latest['zone']}) - "
           f"pillars_used={latest['pillars_used']}/{latest['pillars_total']}")
     print()
     print(render_breakdown_table(latest))
@@ -1094,6 +1134,16 @@ def main():
                 rec = json.loads(f.read_text())
             except (OSError, json.JSONDecodeError):
                 continue
+            # A restated block (bug-regime restatement, METHOD-STABILITY)
+            # is the corrected engine's view of that day. The original
+            # reading stays untouched in the record. The site series
+            # prefers the restated value. Log: /corrections/.
+            rr = rec.get("restated")
+            if isinstance(rr, dict):
+                rec = {**rec, **{k: rr[k] for k in
+                                 ("score", "score_precise", "zone",
+                                  "engine_build", "pillars_used")
+                                 if k in rr}}
             d = rec.get("date")
             sc = rec.get("score")
             # The public archive is a writable surface (a bad manual commit

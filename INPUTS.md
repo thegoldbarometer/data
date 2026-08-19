@@ -15,8 +15,8 @@ reproduce them exactly.
 | `dollar_broad.csv` | Federal Reserve H.10, broad dollar index | US public domain | yes |
 | `cot_mm_net_pct_oi.csv` | Derived from CFTC disaggregated COT (code 088691): managed-money net length as % of open interest | derived, public-domain input | yes |
 | `cb_gold_reporters_sum.csv` | Derived from IMF IRFCL: sum of reporting countries' gold holdings | derived; attribute the IMF | yes |
-| `gvz.csv` | Cboe Gold ETF Volatility Index, daily close | Cboe data — NOT redistributable | **no** — download the official GVZ history CSV from Cboe's site, save as `date,value` |
-| `gld_tonnes.csv` | SPDR Gold Shares daily holdings (tonnes) | SSGA data — redistribution unclear | **no** — fetch `api.spdrgoldshares.com/api/v1/historical-archive`, save as `date,value` |
+| `gvz.csv` | Cboe Gold ETF Volatility Index, daily close | Cboe data, NOT redistributable | **no**: download the official GVZ history CSV from Cboe's site, save as `date,value` |
+| `gld_tonnes.csv` | SPDR Gold Shares daily holdings (tonnes) | SSGA data, redistribution unclear | **no**: fetch `api.spdrgoldshares.com/api/v1/historical-archive`, save as `date,value` |
 
 Run order, from the repository root:
 

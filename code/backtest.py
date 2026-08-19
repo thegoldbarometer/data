@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""backtest.py — The Gold Barometer historical backtest / evidence engine.
+"""backtest.py - The Gold Barometer historical backtest / evidence engine.
 
 Implements docs/DESIGN.md section 2. Reconstructs the composite score at
 month-end cadence from 1971-01 to the most recent complete month using
@@ -824,7 +824,7 @@ def run_backtest(bundle: dict, verbose: bool = True) -> dict:
     wb = bundle["wb_gold"]
     cpi = bundle["cpi"]
     if not wb:
-        raise SystemExit("no WB Pink Sheet gold data — cannot run backtest")
+        raise SystemExit("no WB Pink Sheet gold data - cannot run backtest")
     latest_wb = wb[-1][0]
     if verbose:
         print(f"WB gold: {len(wb)} monthly pts, {wb[0][0]} → {latest_wb}")
