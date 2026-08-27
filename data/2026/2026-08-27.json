@@ -1,7 +1,7 @@
 {
   "date": "2026-08-27",
   "score": 30,
-  "score_precise": 29.529,
+  "score_precise": 29.543,
   "zone": "Unfavorable",
   "version": "1.0",
   "engine_build": "2026-08-12",
@@ -49,7 +49,7 @@
     "entry_price": {
       "name": "entry_price",
       "available": true,
-      "subscore": 11.94,
+      "subscore": 12.0,
       "latest_date": "2026-07-31",
       "latest_value": 4073.0,
       "unit": "USD/toz (WB monthly)",
@@ -61,11 +61,11 @@
       "publishable_raw": true,
       "sub_signals": {
         "trend": {
-          "subscore": 22.81,
+          "subscore": 22.94,
           "dev_vs_12m_ma_pct": 6.71,
-          "return_12m_pct": 36.58,
+          "return_12m_pct": 36.57,
           "ma_window": "12 months (monthly proxy for 200dma; daily gold history not in pipeline v1)",
-          "spot_used_usd_toz": 4599.99
+          "spot_used_usd_toz": 4599.75
         },
         "valuation": {
           "subscore": 1.07,
@@ -184,7 +184,7 @@
       "ramping": true,
       "min_history_days": 90,
       "latest_date": "2026-08-27",
-      "latest_premium_pct": 2.154,
+      "latest_premium_pct": 2.16,
       "history_days": 24,
       "note": "Pillar is being observed but not scored until 90-day history threshold is met.",
       "weight_nominal": 0.0,
