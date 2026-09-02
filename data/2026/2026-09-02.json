@@ -62,10 +62,10 @@
       "sub_signals": {
         "trend": {
           "subscore": 46.26,
-          "dev_vs_12m_ma_pct": -0.34,
-          "return_12m_pct": 19.48,
+          "dev_vs_12m_ma_pct": -0.33,
+          "return_12m_pct": 19.49,
           "ma_window": "12 months (monthly proxy for 200dma; daily gold history not in pipeline v1)",
-          "spot_used_usd_toz": 4382.47
+          "spot_used_usd_toz": 4382.9
         },
         "valuation": {
           "subscore": 1.07,
@@ -184,7 +184,7 @@
       "ramping": true,
       "min_history_days": 90,
       "latest_date": "2026-09-02",
-      "latest_premium_pct": 2.046,
+      "latest_premium_pct": 2.036,
       "history_days": 30,
       "note": "Pillar is being observed but not scored until 90-day history threshold is met.",
       "weight_nominal": 0.0,
