@@ -1,7 +1,7 @@
 {
   "date": "2026-09-08",
   "score": 32,
-  "score_precise": 31.611,
+  "score_precise": 32.217,
   "zone": "Unfavorable",
   "version": "1.0",
   "engine_build": "2026-08-12",
@@ -49,7 +49,7 @@
     "entry_price": {
       "name": "entry_price",
       "available": true,
-      "subscore": 20.52,
+      "subscore": 23.25,
       "latest_date": "2026-08-31",
       "latest_value": 4411.0,
       "unit": "USD/toz (WB monthly)",
@@ -61,11 +61,11 @@
       "publishable_raw": true,
       "sub_signals": {
         "trend": {
-          "subscore": 39.97,
-          "dev_vs_12m_ma_pct": 0.03,
-          "return_12m_pct": 19.92,
+          "subscore": 45.43,
+          "dev_vs_12m_ma_pct": -0.04,
+          "return_12m_pct": 19.85,
           "ma_window": "12 months (monthly proxy for 200dma; daily gold history not in pipeline v1)",
-          "spot_used_usd_toz": 4398.82
+          "spot_used_usd_toz": 4396.02
         },
         "valuation": {
           "subscore": 1.07,
