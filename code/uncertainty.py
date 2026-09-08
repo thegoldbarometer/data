@@ -150,7 +150,7 @@ if ("Favorable", "5y real") in draws_cache and ("Unfavorable", "5y real") in dra
     spread["point_pct"] = round(fm - um, 1)
 
 out = {
-    "note": "Stationary bootstrap, mean block = horizon, 10000 draws, seed fixed. Computed by scripts/backtest/uncertainty.py. NOT yet published on the site.",
+    "note": "Stationary bootstrap, mean block = horizon, 10000 draws, seed fixed. Computed by scripts/backtest/uncertainty.py. Published on the site at /methodology/ section 8.",
     "record_months": len(rows),
     "zones": zones_out,
     "spread_5y_real": spread,

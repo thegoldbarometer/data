@@ -1,6 +1,6 @@
 {
   "note": "Stationary bootstrap, mean block = horizon, 10000 draws, seed fixed. Computed by scripts/backtest/uncertainty.py. Published on the site at /methodology/ section 8.",
-  "record_months": 667,
+  "record_months": 668,
   "zones": [
     {
       "zone": "Favorable",
@@ -410,29 +410,29 @@
         },
         {
           "horizon": "5y nominal",
-          "n_months_with_data": 344,
-          "n_nonoverlapping_windows": 5.73,
-          "median_pct": 43.2,
+          "n_months_with_data": 345,
+          "n_nonoverlapping_windows": 5.75,
+          "median_pct": 43.8,
           "ci90_pct": [
             4.3,
-            79.9
+            80.2
           ]
         },
         {
           "horizon": "5y real",
-          "n_months_with_data": 342,
-          "n_nonoverlapping_windows": 5.7,
+          "n_months_with_data": 343,
+          "n_nonoverlapping_windows": 5.72,
           "median_pct": 19.4,
           "ci90_pct": [
             -10.8,
-            40.6
+            40.8
           ]
         }
       ]
     },
     {
       "zone": "Unfavorable",
-      "n_months": 151,
+      "n_months": 152,
       "n_episodes": 21,
       "episodes": [
         {
@@ -537,19 +537,19 @@
         },
         {
           "from": "2026-03",
-          "to": "2026-07",
-          "months": 5
+          "to": "2026-08",
+          "months": 6
         }
       ],
       "horizons": [
         {
           "horizon": "1y nominal",
-          "n_months_with_data": 142,
-          "n_nonoverlapping_windows": 11.83,
-          "median_pct": 3.4,
+          "n_months_with_data": 143,
+          "n_nonoverlapping_windows": 11.92,
+          "median_pct": 3.7,
           "ci90_pct": [
-            -3.7,
-            14.4
+            -2.9,
+            16.0
           ]
         },
         {
@@ -634,8 +634,8 @@
     "what": "Favorable minus Unfavorable, median 5y real",
     "point_pct": 64.3,
     "ci90_pct": [
-      37.0,
-      119.2
+      36.9,
+      119.7
     ],
     "share_of_draws_positive_pct": 100.0
   }

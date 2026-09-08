@@ -1,19 +1,19 @@
 {
   "note": "Computed by scripts/backtest/question_stats.py from monthly_scores.csv and wb_gold_usd_toz.csv. All figures in percent. Nominal unless the key says real.",
-  "record_months": 667,
+  "record_months": 668,
   "first_month": "1971-01-31",
-  "last_month": "2026-07-31",
+  "last_month": "2026-08-31",
   "wait": {
     "better_means": "score of 40 or higher (Mixed or better)",
     "zones": [
       {
         "zone": "Unfavorable",
         "band": "20-39",
-        "n_months": 151,
+        "n_months": 152,
         "n_reached_better": 146,
         "median_wait_months": 14.0,
         "median_price_change_while_waiting_pct": 2.4,
-        "share_reached_within_1y_pct": 45.0,
+        "share_reached_within_1y_pct": 44.7,
         "share_reached_within_5y_pct": 81.7,
         "n_with_full_5y_window": 126
       },
@@ -34,15 +34,15 @@
     "threshold_pct": 5,
     "near_record": {
       "n_months": 164,
-      "median_fwd_1y_nominal_pct": 28.8,
+      "median_fwd_1y_nominal_pct": 28.9,
       "median_fwd_5y_nominal_pct": 71.8,
       "median_fwd_5y_real_pct": 28.7,
       "median_worst_fall_5y_pct": -3.5
     },
     "away_from_record": {
-      "n_months": 503,
+      "n_months": 504,
       "median_fwd_1y_nominal_pct": 1.8,
-      "median_fwd_5y_nominal_pct": 24.8,
+      "median_fwd_5y_nominal_pct": 25.0,
       "median_fwd_5y_real_pct": 7.7,
       "median_worst_fall_5y_pct": -10.5
     }
@@ -101,9 +101,9 @@
       {
         "month": 8,
         "name": "August",
-        "n": 55,
+        "n": 56,
         "median_mom_pct": 0.8,
-        "share_positive_pct": 56.4
+        "share_positive_pct": 57.1
       },
       {
         "month": 9,
