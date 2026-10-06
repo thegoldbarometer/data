@@ -22,7 +22,9 @@ import statistics
 from pathlib import Path
 
 import os
-ROOT = Path(os.environ.get("TGB_DATA_DIR", str(Path.home() / "projects" / "thegoldbarometer")))
+# Root from the script's own location (scripts/backtest/), TGB_DATA_DIR
+# overrides. Never a $HOME or machine-specific default (2026-09-06 incident).
+ROOT = Path(os.environ.get("TGB_DATA_DIR") or Path(__file__).resolve().parents[2])
 OUT = ROOT / "data" / "backtest" / "uncertainty.json"
 
 random.seed(19710101)  # fixed: reruns must reproduce

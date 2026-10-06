@@ -422,7 +422,7 @@ def pillar_structural_demand(as_of: date,
     out = _pillar_output(label, subscore,
                          latest_date=date.fromisoformat(latest_date),
                          latest_value=None, unit="12m change of holdings",
-                         source="IMF IRFCL (CB) + SPDR GLD tonnes (ETF, internal)",
+                         source="IMF IRFCL (central bank reserves) + SPDR GLD tonnes (fund holdings)",
                          frequency="mixed",
                          staleness=min(x for x in [sub_a.get("staleness_days", 999),
                                                    sub_b.get("staleness_days", 999)] if x is not None),
@@ -614,7 +614,7 @@ def pillar_volatility(as_of: date, gvz: list[tuple[date, float]]) -> dict:
         "staleness_days": stale,
         "stale_limit_days": STALENESS_LIMITS_DAYS["daily"],
         "history_points": len(dist),
-        "source": "Cboe Gold Volatility Index (GVZ) - internal-only per DATA-RIGHTS.md",
+        "source": "Cboe Gold Volatility Index (GVZ), licensed series, published as a score only",
         "frequency": "daily",
         "publishable_raw": False,
         "notes": "Percentile rank is non-reversible without our full internal history "
@@ -923,6 +923,19 @@ def compute_composite(as_of: date, bundle: dict, spot_now: float | None = None,
         "weights_nominal": nominal,
         "weights_effective": {k: round(v, 4) for k, v in effective.items()},
         "pillars": pillar_out,
+        # Facts a machine reader may repeat (audit 2026-09-30): who publishes
+        # this, under which licence, and the free zone-change email.
+        "about": {
+            "publisher": "The Gold Barometer",
+            "site": "https://thegoldbarometer.com/",
+            "methodology": "https://thegoldbarometer.com/methodology/",
+            "license": "CC BY 4.0",
+            "credit": "Source: The Gold Barometer, thegoldbarometer.com",
+        },
+        "alerts": {
+            "what": "One free email each time the reading moves to a new zone, in either direction. No other mail.",
+            "url": "https://thegoldbarometer.com/alerts/",
+        },
     }
 
 

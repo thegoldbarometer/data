@@ -1,19 +1,19 @@
 {
-  "note": "Computed by scripts/backtest/question_stats.py from monthly_scores.csv and wb_gold_usd_toz.csv. All figures in percent. Nominal unless the key says real.",
-  "record_months": 668,
+  "note": "Computed by scripts/backtest/question_stats.py from monthly_scores.csv, wb_gold_usd_toz.csv and wb_silver_usd_toz.csv. All figures in percent. Nominal unless the key says real.",
+  "record_months": 669,
   "first_month": "1971-01-31",
-  "last_month": "2026-08-31",
+  "last_month": "2026-09-30",
   "wait": {
     "better_means": "score of 40 or higher (Mixed or better)",
     "zones": [
       {
         "zone": "Unfavorable",
         "band": "20-39",
-        "n_months": 152,
+        "n_months": 153,
         "n_reached_better": 146,
         "median_wait_months": 14.0,
         "median_price_change_while_waiting_pct": 2.4,
-        "share_reached_within_1y_pct": 44.7,
+        "share_reached_within_1y_pct": 44.4,
         "share_reached_within_5y_pct": 81.7,
         "n_with_full_5y_window": 126
       },
@@ -34,17 +34,17 @@
     "threshold_pct": 5,
     "near_record": {
       "n_months": 164,
-      "median_fwd_1y_nominal_pct": 28.9,
+      "median_fwd_1y_nominal_pct": 28.8,
       "median_fwd_5y_nominal_pct": 71.8,
       "median_fwd_5y_real_pct": 28.7,
       "median_worst_fall_5y_pct": -3.5
     },
     "away_from_record": {
-      "n_months": 504,
+      "n_months": 505,
       "median_fwd_1y_nominal_pct": 1.8,
-      "median_fwd_5y_nominal_pct": 25.0,
-      "median_fwd_5y_real_pct": 7.7,
-      "median_worst_fall_5y_pct": -10.5
+      "median_fwd_5y_nominal_pct": 25.1,
+      "median_fwd_5y_real_pct": 8.0,
+      "median_worst_fall_5y_pct": -10.4
     }
   },
   "seasonality": {
@@ -108,9 +108,9 @@
       {
         "month": 9,
         "name": "September",
-        "n": 55,
-        "median_mom_pct": 0.0,
-        "share_positive_pct": 49.1
+        "n": 56,
+        "median_mom_pct": -0.1,
+        "share_positive_pct": 48.2
       },
       {
         "month": 10,
@@ -214,5 +214,2788 @@
     "median_months_cross_to_trough": 11.0,
     "median_fwd_from_cross_1y_pct": -4.1,
     "median_fwd_from_cross_5y_pct": 67.7
+  },
+  "peaks": {
+    "threshold_pct": 20,
+    "n_peaks": 5,
+    "peaks": [
+      {
+        "peak_month": "1973-06-30",
+        "peak_price": 120.0,
+        "trough_month": "1973-11-30",
+        "trough_price": 95.0,
+        "depth_pct": -20.8,
+        "months_peak_to_trough": 5,
+        "recovered_month": "1974-01-31",
+        "months_to_recover_nominal": 7,
+        "recovered_real_month": "1974-01-31",
+        "months_to_recover_real": 7,
+        "score_at_peak": 48,
+        "zone_at_peak": "Mixed",
+        "score_at_trough": 58,
+        "zone_at_trough": "Mixed"
+      },
+      {
+        "peak_month": "1974-12-31",
+        "peak_price": 184.0,
+        "trough_month": "1976-08-31",
+        "trough_price": 110.0,
+        "depth_pct": -40.2,
+        "months_peak_to_trough": 20,
+        "recovered_month": "1978-03-31",
+        "months_to_recover_nominal": 39,
+        "recovered_real_month": "1979-02-28",
+        "months_to_recover_real": 50,
+        "score_at_peak": 57,
+        "zone_at_peak": "Mixed",
+        "score_at_trough": 49,
+        "zone_at_trough": "Mixed"
+      },
+      {
+        "peak_month": "1980-01-31",
+        "peak_price": 675.0,
+        "trough_month": "1999-07-31",
+        "trough_price": 256.0,
+        "depth_pct": -62.1,
+        "months_peak_to_trough": 234,
+        "recovered_month": "2006-05-31",
+        "months_to_recover_nominal": 316,
+        "recovered_real_month": "2025-02-28",
+        "months_to_recover_real": 541,
+        "score_at_peak": 53,
+        "zone_at_peak": "Mixed",
+        "score_at_trough": 50,
+        "zone_at_trough": "Mixed"
+      },
+      {
+        "peak_month": "2008-03-31",
+        "peak_price": 968.0,
+        "trough_month": "2008-11-30",
+        "trough_price": 761.0,
+        "depth_pct": -21.4,
+        "months_peak_to_trough": 8,
+        "recovered_month": "2009-09-30",
+        "months_to_recover_nominal": 18,
+        "recovered_real_month": "2009-09-30",
+        "months_to_recover_real": 18,
+        "score_at_peak": 50,
+        "zone_at_peak": "Mixed",
+        "score_at_trough": 45,
+        "zone_at_trough": "Mixed"
+      },
+      {
+        "peak_month": "2011-09-30",
+        "peak_price": 1772.0,
+        "trough_month": "2015-12-31",
+        "trough_price": 1076.0,
+        "depth_pct": -39.3,
+        "months_peak_to_trough": 51,
+        "recovered_month": "2020-07-31",
+        "months_to_recover_nominal": 106,
+        "recovered_real_month": "2024-08-31",
+        "months_to_recover_real": 155,
+        "score_at_peak": 54,
+        "zone_at_peak": "Mixed",
+        "score_at_trough": 65,
+        "zone_at_trough": "Favorable"
+      }
+    ],
+    "median_months_to_recover_nominal": 39.0,
+    "median_months_to_recover_real": 50.0,
+    "since_last_peak": {
+      "peak_month": "2026-02-28",
+      "peak_price": 5020.0,
+      "last_month": "2026-09-30",
+      "last_price": 4319.0,
+      "gap_to_peak_pct": -14.0,
+      "months_since_peak": 7,
+      "in_episode": false
+    },
+    "cpi_months_filled": [
+      "2025-10-31",
+      "2026-09-30"
+    ]
+  },
+  "purchase_years": {
+    "stake_usd": 10000,
+    "price_now": 4319.0,
+    "price_now_month": "2026-09-30",
+    "cpi_now_month": "2026-09-30",
+    "years": [
+      {
+        "year": 1971,
+        "price_paid": 40.92,
+        "value_now_nominal": 1055560,
+        "gain_nominal_pct": 10455.6,
+        "value_now_real": 127933,
+        "gain_real_pct": 1179.3,
+        "worst_drop_pct": 0.0,
+        "longest_stretch_below_months": 0,
+        "score_year_avg": 58,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 1972,
+        "price_paid": 58.17,
+        "value_now_nominal": 742521,
+        "gain_nominal_pct": 7325.2,
+        "value_now_real": 92999,
+        "gain_real_pct": 830.0,
+        "worst_drop_pct": 0.0,
+        "longest_stretch_below_months": 0,
+        "score_year_avg": 14,
+        "zone_year": "Historically very unfavorable"
+      },
+      {
+        "year": 1973,
+        "price_paid": 97.33,
+        "value_now_nominal": 443733,
+        "gain_nominal_pct": 4337.3,
+        "value_now_real": 59103,
+        "gain_real_pct": 491.0,
+        "worst_drop_pct": 0.0,
+        "longest_stretch_below_months": 0,
+        "score_year_avg": 42,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 1974,
+        "price_paid": 159.25,
+        "value_now_nominal": 271209,
+        "gain_nominal_pct": 2612.1,
+        "value_now_real": 40057,
+        "gain_real_pct": 300.6,
+        "worst_drop_pct": -30.9,
+        "longest_stretch_below_months": 26,
+        "score_year_avg": 58,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 1975,
+        "price_paid": 160.92,
+        "value_now_nominal": 268400,
+        "gain_nominal_pct": 2584.0,
+        "value_now_real": 43148,
+        "gain_real_pct": 331.5,
+        "worst_drop_pct": -31.6,
+        "longest_stretch_below_months": 22,
+        "score_year_avg": 64,
+        "zone_year": "Favorable"
+      },
+      {
+        "year": 1976,
+        "price_paid": 124.83,
+        "value_now_nominal": 345981,
+        "gain_nominal_pct": 3359.8,
+        "value_now_real": 58919,
+        "gain_real_pct": 489.2,
+        "worst_drop_pct": 0.0,
+        "longest_stretch_below_months": 0,
+        "score_year_avg": 56,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 1977,
+        "price_paid": 147.67,
+        "value_now_nominal": 292483,
+        "gain_nominal_pct": 2824.8,
+        "value_now_real": 53093,
+        "gain_real_pct": 430.9,
+        "worst_drop_pct": 0.0,
+        "longest_stretch_below_months": 0,
+        "score_year_avg": 51,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 1978,
+        "price_paid": 193.17,
+        "value_now_nominal": 223589,
+        "gain_nominal_pct": 2135.9,
+        "value_now_real": 43715,
+        "gain_real_pct": 337.2,
+        "worst_drop_pct": 0.0,
+        "longest_stretch_below_months": 0,
+        "score_year_avg": 47,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 1979,
+        "price_paid": 306.75,
+        "value_now_nominal": 140799,
+        "gain_nominal_pct": 1308.0,
+        "value_now_real": 30790,
+        "gain_real_pct": 207.9,
+        "worst_drop_pct": -16.5,
+        "longest_stretch_below_months": 30,
+        "score_year_avg": 53,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 1980,
+        "price_paid": 607.83,
+        "value_now_nominal": 71056,
+        "gain_nominal_pct": 610.6,
+        "value_now_real": 17499,
+        "gain_real_pct": 75.0,
+        "worst_drop_pct": -57.9,
+        "longest_stretch_below_months": 303,
+        "score_year_avg": 52,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 1981,
+        "price_paid": 459.75,
+        "value_now_nominal": 93942,
+        "gain_nominal_pct": 839.4,
+        "value_now_real": 25492,
+        "gain_real_pct": 154.9,
+        "worst_drop_pct": -44.3,
+        "longest_stretch_below_months": 212,
+        "score_year_avg": 33,
+        "zone_year": "Unfavorable"
+      },
+      {
+        "year": 1982,
+        "price_paid": 375.75,
+        "value_now_nominal": 114943,
+        "gain_nominal_pct": 1049.4,
+        "value_now_real": 33227,
+        "gain_real_pct": 232.3,
+        "worst_drop_pct": -31.9,
+        "longest_stretch_below_months": 81,
+        "score_year_avg": 22,
+        "zone_year": "Unfavorable"
+      },
+      {
+        "year": 1983,
+        "price_paid": 422.58,
+        "value_now_nominal": 102205,
+        "gain_nominal_pct": 922.0,
+        "value_now_real": 30433,
+        "gain_real_pct": 204.3,
+        "worst_drop_pct": -39.4,
+        "longest_stretch_below_months": 194,
+        "score_year_avg": 15,
+        "zone_year": "Historically very unfavorable"
+      },
+      {
+        "year": 1984,
+        "price_paid": 360.5,
+        "value_now_nominal": 119806,
+        "gain_nominal_pct": 1098.1,
+        "value_now_real": 37242,
+        "gain_real_pct": 272.4,
+        "worst_drop_pct": -29.0,
+        "longest_stretch_below_months": 80,
+        "score_year_avg": 25,
+        "zone_year": "Unfavorable"
+      },
+      {
+        "year": 1985,
+        "price_paid": 318.0,
+        "value_now_nominal": 135818,
+        "gain_nominal_pct": 1258.2,
+        "value_now_real": 43742,
+        "gain_real_pct": 337.4,
+        "worst_drop_pct": -19.5,
+        "longest_stretch_below_months": 55,
+        "score_year_avg": 29,
+        "zone_year": "Unfavorable"
+      },
+      {
+        "year": 1986,
+        "price_paid": 367.75,
+        "value_now_nominal": 117444,
+        "gain_nominal_pct": 1074.4,
+        "value_now_real": 38567,
+        "gain_real_pct": 285.7,
+        "worst_drop_pct": -30.4,
+        "longest_stretch_below_months": 80,
+        "score_year_avg": 22,
+        "zone_year": "Unfavorable"
+      },
+      {
+        "year": 1987,
+        "price_paid": 446.42,
+        "value_now_nominal": 96748,
+        "gain_nominal_pct": 867.5,
+        "value_now_real": 32914,
+        "gain_real_pct": 229.1,
+        "worst_drop_pct": -42.7,
+        "longest_stretch_below_months": 206,
+        "score_year_avg": 21,
+        "zone_year": "Unfavorable"
+      },
+      {
+        "year": 1988,
+        "price_paid": 437.08,
+        "value_now_nominal": 98814,
+        "gain_nominal_pct": 888.1,
+        "value_now_real": 34955,
+        "gain_real_pct": 249.5,
+        "worst_drop_pct": -41.4,
+        "longest_stretch_below_months": 190,
+        "score_year_avg": 31,
+        "zone_year": "Unfavorable"
+      },
+      {
+        "year": 1989,
+        "price_paid": 381.42,
+        "value_now_nominal": 113236,
+        "gain_nominal_pct": 1032.4,
+        "value_now_real": 41992,
+        "gain_real_pct": 319.9,
+        "worst_drop_pct": -32.9,
+        "longest_stretch_below_months": 85,
+        "score_year_avg": 42,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 1990,
+        "price_paid": 383.5,
+        "value_now_nominal": 112621,
+        "gain_nominal_pct": 1026.2,
+        "value_now_real": 44016,
+        "gain_real_pct": 340.2,
+        "worst_drop_pct": -33.2,
+        "longest_stretch_below_months": 86,
+        "score_year_avg": 42,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 1991,
+        "price_paid": 362.25,
+        "value_now_nominal": 119227,
+        "gain_nominal_pct": 1092.3,
+        "value_now_real": 48580,
+        "gain_real_pct": 385.8,
+        "worst_drop_pct": -29.3,
+        "longest_stretch_below_months": 80,
+        "score_year_avg": 47,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 1992,
+        "price_paid": 343.67,
+        "value_now_nominal": 125674,
+        "gain_nominal_pct": 1156.7,
+        "value_now_real": 52763,
+        "gain_real_pct": 427.6,
+        "worst_drop_pct": -25.5,
+        "longest_stretch_below_months": 67,
+        "score_year_avg": 43,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 1993,
+        "price_paid": 359.67,
+        "value_now_nominal": 120083,
+        "gain_nominal_pct": 1100.8,
+        "value_now_real": 51938,
+        "gain_real_pct": 419.4,
+        "worst_drop_pct": -28.8,
+        "longest_stretch_below_months": 79,
+        "score_year_avg": 45,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 1994,
+        "price_paid": 383.92,
+        "value_now_nominal": 112498,
+        "gain_nominal_pct": 1025.0,
+        "value_now_real": 49903,
+        "gain_real_pct": 399.0,
+        "worst_drop_pct": -33.3,
+        "longest_stretch_below_months": 86,
+        "score_year_avg": 33,
+        "zone_year": "Unfavorable"
+      },
+      {
+        "year": 1995,
+        "price_paid": 384.17,
+        "value_now_nominal": 112425,
+        "gain_nominal_pct": 1024.3,
+        "value_now_real": 51272,
+        "gain_real_pct": 412.7,
+        "worst_drop_pct": -33.4,
+        "longest_stretch_below_months": 86,
+        "score_year_avg": 41,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 1996,
+        "price_paid": 387.58,
+        "value_now_nominal": 111434,
+        "gain_nominal_pct": 1014.3,
+        "value_now_real": 52299,
+        "gain_real_pct": 423.0,
+        "worst_drop_pct": -33.9,
+        "longest_stretch_below_months": 82,
+        "score_year_avg": 43,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 1997,
+        "price_paid": 331.17,
+        "value_now_nominal": 130418,
+        "gain_nominal_pct": 1204.2,
+        "value_now_real": 62638,
+        "gain_real_pct": 526.4,
+        "worst_drop_pct": -22.7,
+        "longest_stretch_below_months": 59,
+        "score_year_avg": 51,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 1998,
+        "price_paid": 294.08,
+        "value_now_nominal": 146863,
+        "gain_nominal_pct": 1368.6,
+        "value_now_real": 71644,
+        "gain_real_pct": 616.4,
+        "worst_drop_pct": -12.9,
+        "longest_stretch_below_months": 23,
+        "score_year_avg": 50,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 1999,
+        "price_paid": 278.75,
+        "value_now_nominal": 154942,
+        "gain_nominal_pct": 1449.4,
+        "value_now_real": 77244,
+        "gain_real_pct": 672.4,
+        "worst_drop_pct": -6.7,
+        "longest_stretch_below_months": 13,
+        "score_year_avg": 52,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 2000,
+        "price_paid": 279.0,
+        "value_now_nominal": 154803,
+        "gain_nominal_pct": 1448.0,
+        "value_now_real": 79750,
+        "gain_real_pct": 697.5,
+        "worst_drop_pct": -6.8,
+        "longest_stretch_below_months": 8,
+        "score_year_avg": 57,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 2001,
+        "price_paid": 270.83,
+        "value_now_nominal": 159471,
+        "gain_nominal_pct": 1494.7,
+        "value_now_real": 84503,
+        "gain_real_pct": 745.0,
+        "worst_drop_pct": 0.0,
+        "longest_stretch_below_months": 0,
+        "score_year_avg": 66,
+        "zone_year": "Favorable"
+      },
+      {
+        "year": 2002,
+        "price_paid": 310.0,
+        "value_now_nominal": 139323,
+        "gain_nominal_pct": 1293.2,
+        "value_now_real": 75016,
+        "gain_real_pct": 650.2,
+        "worst_drop_pct": 0.0,
+        "longest_stretch_below_months": 0,
+        "score_year_avg": 45,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 2003,
+        "price_paid": 363.58,
+        "value_now_nominal": 118790,
+        "gain_nominal_pct": 1087.9,
+        "value_now_real": 65429,
+        "gain_real_pct": 554.3,
+        "worst_drop_pct": 0.0,
+        "longest_stretch_below_months": 0,
+        "score_year_avg": 57,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 2004,
+        "price_paid": 409.17,
+        "value_now_nominal": 105556,
+        "gain_nominal_pct": 955.6,
+        "value_now_real": 59687,
+        "gain_real_pct": 496.9,
+        "worst_drop_pct": 0.0,
+        "longest_stretch_below_months": 0,
+        "score_year_avg": 48,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 2005,
+        "price_paid": 444.83,
+        "value_now_nominal": 97093,
+        "gain_nominal_pct": 870.9,
+        "value_now_real": 56767,
+        "gain_real_pct": 467.7,
+        "worst_drop_pct": 0.0,
+        "longest_stretch_below_months": 0,
+        "score_year_avg": 67,
+        "zone_year": "Favorable"
+      },
+      {
+        "year": 2006,
+        "price_paid": 604.42,
+        "value_now_nominal": 71457,
+        "gain_nominal_pct": 614.6,
+        "value_now_real": 43116,
+        "gain_real_pct": 331.2,
+        "worst_drop_pct": 0.0,
+        "longest_stretch_below_months": 0,
+        "score_year_avg": 44,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 2007,
+        "price_paid": 696.67,
+        "value_now_nominal": 61995,
+        "gain_nominal_pct": 520.0,
+        "value_now_real": 38497,
+        "gain_real_pct": 285.0,
+        "worst_drop_pct": 0.0,
+        "longest_stretch_below_months": 0,
+        "score_year_avg": 50,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 2008,
+        "price_paid": 871.75,
+        "value_now_nominal": 49544,
+        "gain_nominal_pct": 395.4,
+        "value_now_real": 31912,
+        "gain_real_pct": 219.1,
+        "worst_drop_pct": -1.5,
+        "longest_stretch_below_months": 1,
+        "score_year_avg": 49,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 2009,
+        "price_paid": 973.0,
+        "value_now_nominal": 44388,
+        "gain_nominal_pct": 343.9,
+        "value_now_real": 28521,
+        "gain_real_pct": 185.2,
+        "worst_drop_pct": 0.0,
+        "longest_stretch_below_months": 0,
+        "score_year_avg": 57,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 2010,
+        "price_paid": 1224.67,
+        "value_now_nominal": 35267,
+        "gain_nominal_pct": 252.7,
+        "value_now_real": 23025,
+        "gain_real_pct": 130.2,
+        "worst_drop_pct": -12.1,
+        "longest_stretch_below_months": 12,
+        "score_year_avg": 52,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 2011,
+        "price_paid": 1569.17,
+        "value_now_nominal": 27524,
+        "gain_nominal_pct": 175.2,
+        "value_now_real": 18540,
+        "gain_real_pct": 85.4,
+        "worst_drop_pct": -31.4,
+        "longest_stretch_below_months": 82,
+        "score_year_avg": 54,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 2012,
+        "price_paid": 1669.58,
+        "value_now_nominal": 25869,
+        "gain_nominal_pct": 158.7,
+        "value_now_real": 17776,
+        "gain_real_pct": 77.8,
+        "worst_drop_pct": -35.6,
+        "longest_stretch_below_months": 86,
+        "score_year_avg": 60,
+        "zone_year": "Favorable"
+      },
+      {
+        "year": 2013,
+        "price_paid": 1411.67,
+        "value_now_nominal": 30595,
+        "gain_nominal_pct": 206.0,
+        "value_now_real": 21324,
+        "gain_real_pct": 113.2,
+        "worst_drop_pct": -23.8,
+        "longest_stretch_below_months": 66,
+        "score_year_avg": 63,
+        "zone_year": "Favorable"
+      },
+      {
+        "year": 2014,
+        "price_paid": 1265.58,
+        "value_now_nominal": 34127,
+        "gain_nominal_pct": 241.3,
+        "value_now_real": 24176,
+        "gain_real_pct": 141.8,
+        "worst_drop_pct": -15.0,
+        "longest_stretch_below_months": 17,
+        "score_year_avg": 60,
+        "zone_year": "Favorable"
+      },
+      {
+        "year": 2015,
+        "price_paid": 1160.75,
+        "value_now_nominal": 37209,
+        "gain_nominal_pct": 272.1,
+        "value_now_real": 26387,
+        "gain_real_pct": 163.9,
+        "worst_drop_pct": -5.4,
+        "longest_stretch_below_months": 1,
+        "score_year_avg": 61,
+        "zone_year": "Favorable"
+      },
+      {
+        "year": 2016,
+        "price_paid": 1249.0,
+        "value_now_nominal": 34580,
+        "gain_nominal_pct": 245.8,
+        "value_now_real": 24840,
+        "gain_real_pct": 148.4,
+        "worst_drop_pct": -4.6,
+        "longest_stretch_below_months": 5,
+        "score_year_avg": 56,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 2017,
+        "price_paid": 1257.5,
+        "value_now_nominal": 34346,
+        "gain_nominal_pct": 243.5,
+        "value_now_real": 25198,
+        "gain_real_pct": 152.0,
+        "worst_drop_pct": -4.7,
+        "longest_stretch_below_months": 6,
+        "score_year_avg": 60,
+        "zone_year": "Favorable"
+      },
+      {
+        "year": 2018,
+        "price_paid": 1269.25,
+        "value_now_nominal": 34028,
+        "gain_nominal_pct": 240.3,
+        "value_now_real": 25567,
+        "gain_real_pct": 155.7,
+        "worst_drop_pct": 0.0,
+        "longest_stretch_below_months": 0,
+        "score_year_avg": 61,
+        "zone_year": "Favorable"
+      },
+      {
+        "year": 2019,
+        "price_paid": 1392.58,
+        "value_now_nominal": 31014,
+        "gain_nominal_pct": 210.1,
+        "value_now_real": 23737,
+        "gain_real_pct": 137.4,
+        "worst_drop_pct": 0.0,
+        "longest_stretch_below_months": 0,
+        "score_year_avg": 57,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 2020,
+        "price_paid": 1770.25,
+        "value_now_nominal": 24398,
+        "gain_nominal_pct": 144.0,
+        "value_now_real": 18905,
+        "gain_real_pct": 89.1,
+        "worst_drop_pct": -6.0,
+        "longest_stretch_below_months": 5,
+        "score_year_avg": 52,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 2021,
+        "price_paid": 1799.58,
+        "value_now_nominal": 24000,
+        "gain_nominal_pct": 140.0,
+        "value_now_real": 19454,
+        "gain_real_pct": 94.5,
+        "worst_drop_pct": -7.5,
+        "longest_stretch_below_months": 6,
+        "score_year_avg": 57,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 2022,
+        "price_paid": 1800.75,
+        "value_now_nominal": 23984,
+        "gain_nominal_pct": 139.8,
+        "value_now_real": 20985,
+        "gain_real_pct": 109.9,
+        "worst_drop_pct": 0.0,
+        "longest_stretch_below_months": 0,
+        "score_year_avg": 50,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 2023,
+        "price_paid": 1942.75,
+        "value_now_nominal": 22231,
+        "gain_nominal_pct": 122.3,
+        "value_now_real": 20274,
+        "gain_real_pct": 102.7,
+        "worst_drop_pct": 0.0,
+        "longest_stretch_below_months": 0,
+        "score_year_avg": 46,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 2024,
+        "price_paid": 2387.58,
+        "value_now_nominal": 18089,
+        "gain_nominal_pct": 80.9,
+        "value_now_real": 16993,
+        "gain_real_pct": 69.9,
+        "worst_drop_pct": 0.0,
+        "longest_stretch_below_months": 0,
+        "score_year_avg": 37,
+        "zone_year": "Unfavorable"
+      },
+      {
+        "year": 2025,
+        "price_paid": 3441.5,
+        "value_now_nominal": 12550,
+        "gain_nominal_pct": 25.5,
+        "value_now_real": 12110,
+        "gain_real_pct": 21.1,
+        "worst_drop_pct": 0.0,
+        "longest_stretch_below_months": 0,
+        "score_year_avg": 37,
+        "zone_year": "Unfavorable"
+      }
+    ],
+    "years_total": 55,
+    "first_year": 1971,
+    "last_year": 2025,
+    "years_ahead_nominal": 55,
+    "years_ahead_real": 55,
+    "years_behind_real": [],
+    "median_gain_nominal_pct": 1014.3,
+    "median_gain_real_pct": 285.7,
+    "median_value_now_real": 38567,
+    "worst_year_real": 2025,
+    "best_year_real": 1971,
+    "median_longest_stretch_below_months": 12.0,
+    "longest_stretch_below_months_max": 303,
+    "cpi_months_filled": [
+      "2025-10-31",
+      "2026-09-30"
+    ]
+  },
+  "price_vs_past": {
+    "measure": "price divided by the CPI of its month, midrank percentile against every earlier month of the World Bank series (from 1960)",
+    "last_month": "2026-09-30",
+    "last_price": 4319.0,
+    "last_percentile": null,
+    "last_band": null,
+    "months_higher_than_last_pct": null,
+    "months_in_top_tenth_since_1971": 246,
+    "bands": [
+      {
+        "band": "Top tenth",
+        "lo": 90,
+        "hi": 100,
+        "n_months": 246,
+        "first_month": "1972-05-31",
+        "last_month": "2026-08-31",
+        "runs": [
+          {
+            "from": "1972-05-31",
+            "to": "1975-08-31",
+            "months": 40
+          },
+          {
+            "from": "1978-06-30",
+            "to": "1981-10-31",
+            "months": 41
+          },
+          {
+            "from": "2009-01-31",
+            "to": "2014-08-31",
+            "months": 68
+          },
+          {
+            "from": "2019-07-31",
+            "to": "2022-06-30",
+            "months": 36
+          },
+          {
+            "from": "2022-12-31",
+            "to": "2025-09-30",
+            "months": 34
+          }
+        ],
+        "months_in_runs": 219,
+        "median_fwd_1y_nominal_pct": 7.8,
+        "median_fwd_1y_real_pct": 3.7,
+        "median_fwd_5y_nominal_pct": 35.5,
+        "median_fwd_5y_real_pct": 6.3,
+        "median_fwd_10y_real_pct": 8.4,
+        "worst_fwd_5y_real_pct": -66.9,
+        "median_worst_fall_5y_pct": -16.3,
+        "share_5y_real_positive_pct": 53.4,
+        "n_with_5y": 191
+      },
+      {
+        "band": "75 to 90",
+        "lo": 75,
+        "hi": 90,
+        "n_months": 169,
+        "first_month": "1972-02-29",
+        "last_month": "2022-11-30",
+        "runs": [
+          {
+            "from": "1975-09-30",
+            "to": "1977-12-31",
+            "months": 28
+          },
+          {
+            "from": "1983-03-31",
+            "to": "1984-07-31",
+            "months": 17
+          },
+          {
+            "from": "1986-08-31",
+            "to": "1988-08-31",
+            "months": 25
+          },
+          {
+            "from": "2006-11-30",
+            "to": "2007-12-31",
+            "months": 14
+          },
+          {
+            "from": "2014-09-30",
+            "to": "2016-06-30",
+            "months": 22
+          },
+          {
+            "from": "2016-10-31",
+            "to": "2019-06-30",
+            "months": 33
+          }
+        ],
+        "months_in_runs": 139,
+        "median_fwd_1y_nominal_pct": 8.5,
+        "median_fwd_1y_real_pct": 4.9,
+        "median_fwd_5y_nominal_pct": 49.8,
+        "median_fwd_5y_real_pct": 28.7,
+        "median_fwd_10y_real_pct": 34.4,
+        "worst_fwd_5y_real_pct": -44.0,
+        "median_worst_fall_5y_pct": -8.3,
+        "share_5y_real_positive_pct": 70.7,
+        "n_with_5y": 164
+      },
+      {
+        "band": "50 to 75",
+        "lo": 50,
+        "hi": 75,
+        "n_months": 95,
+        "first_month": "1984-08-31",
+        "last_month": "2006-10-31",
+        "runs": [
+          {
+            "from": "1984-08-31",
+            "to": "1986-07-31",
+            "months": 24
+          },
+          {
+            "from": "1988-09-30",
+            "to": "1991-08-31",
+            "months": 36
+          }
+        ],
+        "months_in_runs": 60,
+        "median_fwd_1y_nominal_pct": 0.3,
+        "median_fwd_1y_real_pct": -3.1,
+        "median_fwd_5y_nominal_pct": 4.9,
+        "median_fwd_5y_real_pct": -12.0,
+        "median_fwd_10y_real_pct": -21.0,
+        "worst_fwd_5y_real_pct": -43.0,
+        "median_worst_fall_5y_pct": -10.6,
+        "share_5y_real_positive_pct": 16.8,
+        "n_with_5y": 95
+      },
+      {
+        "band": "25 to 50",
+        "lo": 25,
+        "hi": 50,
+        "n_months": 145,
+        "first_month": "1972-01-31",
+        "last_month": "2005-08-31",
+        "runs": [
+          {
+            "from": "1992-01-31",
+            "to": "1993-04-30",
+            "months": 16
+          },
+          {
+            "from": "1996-04-30",
+            "to": "2004-11-30",
+            "months": 104
+          }
+        ],
+        "months_in_runs": 120,
+        "median_fwd_1y_nominal_pct": 5.1,
+        "median_fwd_1y_real_pct": 2.4,
+        "median_fwd_5y_nominal_pct": 49.3,
+        "median_fwd_5y_real_pct": 31.6,
+        "median_fwd_10y_real_pct": 137.1,
+        "worst_fwd_5y_real_pct": -41.5,
+        "median_worst_fall_5y_pct": -7.1,
+        "share_5y_real_positive_pct": 63.4,
+        "n_with_5y": 145
+      },
+      {
+        "band": "Bottom quarter",
+        "lo": 0,
+        "hi": 25,
+        "n_months": 12,
+        "first_month": "1971-01-31",
+        "last_month": "1971-12-31",
+        "runs": [
+          {
+            "from": "1971-01-31",
+            "to": "1971-12-31",
+            "months": 12
+          }
+        ],
+        "months_in_runs": 12,
+        "median_fwd_1y_nominal_pct": 47.7,
+        "median_fwd_1y_real_pct": 42.8,
+        "median_fwd_5y_nominal_pct": 210.7,
+        "median_fwd_5y_real_pct": 120.3,
+        "median_fwd_10y_real_pct": 389.5,
+        "worst_fwd_5y_real_pct": 81.7,
+        "median_worst_fall_5y_pct": 0.0,
+        "share_5y_real_positive_pct": 100.0,
+        "n_with_5y": 12
+      }
+    ],
+    "cpi_months_filled": [
+      "2025-10-31",
+      "2026-09-30"
+    ]
+  },
+  "monthly_moves": {
+    "measure": "change of the World Bank monthly average price from the previous month, 1971 onward",
+    "last_month": "2026-09-30",
+    "last_move_pct": -2.1,
+    "last_band": "Down 2% to 5%",
+    "bands": [
+      {
+        "band": "Down more than 5%",
+        "lo": null,
+        "hi": -5.0,
+        "n_months": 48,
+        "median_fwd_1y_nominal_pct": 2.7,
+        "median_fwd_1y_real_pct": -0.6,
+        "median_fwd_5y_nominal_pct": 25.9,
+        "median_fwd_5y_real_pct": 5.7,
+        "share_1y_positive_pct": 61.7,
+        "worst_fwd_1y_nominal_pct": -33.9,
+        "best_fwd_1y_nominal_pct": 91.6,
+        "n_with_1y": 47
+      },
+      {
+        "band": "Down 2% to 5%",
+        "lo": -5.0,
+        "hi": -2.0,
+        "n_months": 105,
+        "median_fwd_1y_nominal_pct": -0.1,
+        "median_fwd_1y_real_pct": -3.4,
+        "median_fwd_5y_nominal_pct": 14.4,
+        "median_fwd_5y_real_pct": -2.4,
+        "share_1y_positive_pct": 50.0,
+        "worst_fwd_1y_nominal_pct": -34.6,
+        "best_fwd_1y_nominal_pct": 59.0,
+        "n_with_1y": 100
+      },
+      {
+        "band": "Within 2%",
+        "lo": -2.0,
+        "hi": 2.0,
+        "n_months": 296,
+        "median_fwd_1y_nominal_pct": 3.7,
+        "median_fwd_1y_real_pct": 0.7,
+        "median_fwd_5y_nominal_pct": 31.9,
+        "median_fwd_5y_real_pct": 10.1,
+        "share_1y_positive_pct": 58.6,
+        "worst_fwd_1y_nominal_pct": -33.9,
+        "best_fwd_1y_nominal_pct": 128.9,
+        "n_with_1y": 295
+      },
+      {
+        "band": "Up 2% to 5%",
+        "lo": 2.0,
+        "hi": 5.0,
+        "n_months": 121,
+        "median_fwd_1y_nominal_pct": 11.7,
+        "median_fwd_1y_real_pct": 8.7,
+        "median_fwd_5y_nominal_pct": 50.4,
+        "median_fwd_5y_real_pct": 24.8,
+        "share_1y_positive_pct": 70.2,
+        "worst_fwd_1y_nominal_pct": -31.1,
+        "best_fwd_1y_nominal_pct": 108.3,
+        "n_with_1y": 121
+      },
+      {
+        "band": "Up more than 5%",
+        "lo": 5.0,
+        "hi": null,
+        "n_months": 98,
+        "median_fwd_1y_nominal_pct": 17.6,
+        "median_fwd_1y_real_pct": 13.0,
+        "median_fwd_5y_nominal_pct": 53.3,
+        "median_fwd_5y_real_pct": 20.2,
+        "share_1y_positive_pct": 71.0,
+        "worst_fwd_1y_nominal_pct": -36.4,
+        "best_fwd_1y_nominal_pct": 197.4,
+        "n_with_1y": 93
+      }
+    ],
+    "share_up_pct": 50.0
+  },
+  "price_by_year": {
+    "measure": "World Bank monthly average price, USD per troy ounce, 1971 onward; today's dollars use the CPI of the last month",
+    "last_month": "2026-09-30",
+    "last_price": 4319.0,
+    "cpi_last_month": "2026-09-30",
+    "years": [
+      {
+        "year": 1971,
+        "months": 12,
+        "partial": false,
+        "avg": 40.92,
+        "avg_today_dollars": 337.6,
+        "high": 43.0,
+        "high_month": "1971-08-31",
+        "low": 38.0,
+        "low_month": "1971-01-31",
+        "change_pct": null,
+        "score_year_avg": 58,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 1972,
+        "months": 12,
+        "partial": false,
+        "avg": 58.17,
+        "avg_today_dollars": 464.41,
+        "high": 67.0,
+        "high_month": "1972-08-31",
+        "low": 46.0,
+        "low_month": "1972-01-31",
+        "change_pct": 42.2,
+        "score_year_avg": 14,
+        "zone_year": "Historically very unfavorable"
+      },
+      {
+        "year": 1973,
+        "months": 12,
+        "partial": false,
+        "avg": 97.33,
+        "avg_today_dollars": 730.76,
+        "high": 120.0,
+        "high_month": "1973-06-30",
+        "low": 65.0,
+        "low_month": "1973-01-31",
+        "change_pct": 67.3,
+        "score_year_avg": 42,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 1974,
+        "months": 12,
+        "partial": false,
+        "avg": 159.25,
+        "avg_today_dollars": 1078.2,
+        "high": 184.0,
+        "high_month": "1974-12-31",
+        "low": 129.0,
+        "low_month": "1974-01-31",
+        "change_pct": 63.6,
+        "score_year_avg": 58,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 1975,
+        "months": 12,
+        "partial": false,
+        "avg": 160.92,
+        "avg_today_dollars": 1000.98,
+        "high": 180.0,
+        "high_month": "1975-02-28",
+        "low": 139.0,
+        "low_month": "1975-12-31",
+        "change_pct": 1.0,
+        "score_year_avg": 64,
+        "zone_year": "Favorable"
+      },
+      {
+        "year": 1976,
+        "months": 12,
+        "partial": false,
+        "avg": 124.83,
+        "avg_today_dollars": 733.04,
+        "high": 134.0,
+        "high_month": "1976-12-31",
+        "low": 110.0,
+        "low_month": "1976-08-31",
+        "change_pct": -22.4,
+        "score_year_avg": 56,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 1977,
+        "months": 12,
+        "partial": false,
+        "avg": 147.67,
+        "avg_today_dollars": 813.48,
+        "high": 162.0,
+        "high_month": "1977-11-30",
+        "low": 132.0,
+        "low_month": "1977-01-31",
+        "change_pct": 18.3,
+        "score_year_avg": 51,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 1978,
+        "months": 12,
+        "partial": false,
+        "avg": 193.17,
+        "avg_today_dollars": 987.98,
+        "high": 227.0,
+        "high_month": "1978-10-31",
+        "low": 173.0,
+        "low_month": "1978-01-31",
+        "change_pct": 30.8,
+        "score_year_avg": 47,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 1979,
+        "months": 12,
+        "partial": false,
+        "avg": 306.75,
+        "avg_today_dollars": 1402.74,
+        "high": 455.0,
+        "high_month": "1979-12-31",
+        "low": 227.0,
+        "low_month": "1979-01-31",
+        "change_pct": 58.8,
+        "score_year_avg": 53,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 1980,
+        "months": 12,
+        "partial": false,
+        "avg": 607.83,
+        "avg_today_dollars": 2468.14,
+        "high": 675.0,
+        "high_month": "1980-01-31",
+        "low": 514.0,
+        "low_month": "1980-05-31",
+        "change_pct": 98.2,
+        "score_year_avg": 52,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 1981,
+        "months": 12,
+        "partial": false,
+        "avg": 459.75,
+        "avg_today_dollars": 1694.29,
+        "high": 557.0,
+        "high_month": "1981-01-31",
+        "low": 409.0,
+        "low_month": "1981-07-31",
+        "change_pct": -24.4,
+        "score_year_avg": 33,
+        "zone_year": "Unfavorable"
+      },
+      {
+        "year": 1982,
+        "months": 12,
+        "partial": false,
+        "avg": 375.75,
+        "avg_today_dollars": 1299.85,
+        "high": 445.0,
+        "high_month": "1982-12-31",
+        "low": 315.0,
+        "low_month": "1982-06-30",
+        "change_pct": -18.3,
+        "score_year_avg": 22,
+        "zone_year": "Unfavorable"
+      },
+      {
+        "year": 1983,
+        "months": 12,
+        "partial": false,
+        "avg": 422.58,
+        "avg_today_dollars": 1419.18,
+        "high": 491.0,
+        "high_month": "1983-02-28",
+        "low": 382.0,
+        "low_month": "1983-11-30",
+        "change_pct": 12.5,
+        "score_year_avg": 15,
+        "zone_year": "Historically very unfavorable"
+      },
+      {
+        "year": 1984,
+        "months": 12,
+        "partial": false,
+        "avg": 360.5,
+        "avg_today_dollars": 1159.71,
+        "high": 394.0,
+        "high_month": "1984-03-31",
+        "low": 320.0,
+        "low_month": "1984-12-31",
+        "change_pct": -14.7,
+        "score_year_avg": 25,
+        "zone_year": "Unfavorable"
+      },
+      {
+        "year": 1985,
+        "months": 12,
+        "partial": false,
+        "avg": 318.0,
+        "avg_today_dollars": 987.39,
+        "high": 330.0,
+        "high_month": "1985-08-31",
+        "low": 299.0,
+        "low_month": "1985-02-28",
+        "change_pct": -11.8,
+        "score_year_avg": 29,
+        "zone_year": "Unfavorable"
+      },
+      {
+        "year": 1986,
+        "months": 12,
+        "partial": false,
+        "avg": 367.75,
+        "avg_today_dollars": 1119.87,
+        "high": 424.0,
+        "high_month": "1986-10-31",
+        "low": 339.0,
+        "low_month": "1986-02-28",
+        "change_pct": 15.6,
+        "score_year_avg": 22,
+        "zone_year": "Unfavorable"
+      },
+      {
+        "year": 1987,
+        "months": 12,
+        "partial": false,
+        "avg": 446.42,
+        "avg_today_dollars": 1312.2,
+        "high": 486.0,
+        "high_month": "1987-12-31",
+        "low": 401.0,
+        "low_month": "1987-02-28",
+        "change_pct": 21.4,
+        "score_year_avg": 21,
+        "zone_year": "Unfavorable"
+      },
+      {
+        "year": 1988,
+        "months": 12,
+        "partial": false,
+        "avg": 437.08,
+        "avg_today_dollars": 1235.6,
+        "high": 477.0,
+        "high_month": "1988-01-31",
+        "low": 407.0,
+        "low_month": "1988-10-31",
+        "change_pct": -2.1,
+        "score_year_avg": 31,
+        "zone_year": "Unfavorable"
+      },
+      {
+        "year": 1989,
+        "months": 12,
+        "partial": false,
+        "avg": 381.42,
+        "avg_today_dollars": 1028.52,
+        "high": 409.0,
+        "high_month": "1989-12-31",
+        "low": 362.0,
+        "low_month": "1989-09-30",
+        "change_pct": -12.7,
+        "score_year_avg": 42,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 1990,
+        "months": 12,
+        "partial": false,
+        "avg": 383.5,
+        "avg_today_dollars": 981.24,
+        "high": 417.0,
+        "high_month": "1990-02-28",
+        "low": 352.0,
+        "low_month": "1990-06-30",
+        "change_pct": 0.5,
+        "score_year_avg": 42,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 1991,
+        "months": 12,
+        "partial": false,
+        "avg": 362.25,
+        "avg_today_dollars": 889.04,
+        "high": 384.0,
+        "high_month": "1991-01-31",
+        "low": 349.0,
+        "low_month": "1991-09-30",
+        "change_pct": -5.5,
+        "score_year_avg": 47,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 1992,
+        "months": 12,
+        "partial": false,
+        "avg": 343.67,
+        "avg_today_dollars": 818.56,
+        "high": 354.0,
+        "high_month": "1992-01-31",
+        "low": 335.0,
+        "low_month": "1992-11-30",
+        "change_pct": -5.1,
+        "score_year_avg": 43,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 1993,
+        "months": 12,
+        "partial": false,
+        "avg": 359.67,
+        "avg_today_dollars": 831.58,
+        "high": 392.0,
+        "high_month": "1993-07-31",
+        "low": 329.0,
+        "low_month": "1993-01-31",
+        "change_pct": 4.7,
+        "score_year_avg": 45,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 1994,
+        "months": 12,
+        "partial": false,
+        "avg": 383.92,
+        "avg_today_dollars": 865.48,
+        "high": 392.0,
+        "high_month": "1994-09-30",
+        "low": 377.0,
+        "low_month": "1994-04-30",
+        "change_pct": 6.7,
+        "score_year_avg": 33,
+        "zone_year": "Unfavorable"
+      },
+      {
+        "year": 1995,
+        "months": 12,
+        "partial": false,
+        "avg": 384.17,
+        "avg_today_dollars": 842.38,
+        "high": 391.0,
+        "high_month": "1995-04-30",
+        "low": 377.0,
+        "low_month": "1995-02-28",
+        "change_pct": 0.1,
+        "score_year_avg": 41,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 1996,
+        "months": 12,
+        "partial": false,
+        "avg": 387.58,
+        "avg_today_dollars": 825.84,
+        "high": 405.0,
+        "high_month": "1996-02-29",
+        "low": 369.0,
+        "low_month": "1996-12-31",
+        "change_pct": 0.9,
+        "score_year_avg": 43,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 1997,
+        "months": 12,
+        "partial": false,
+        "avg": 331.17,
+        "avg_today_dollars": 689.52,
+        "high": 355.0,
+        "high_month": "1997-01-31",
+        "low": 289.0,
+        "low_month": "1997-12-31",
+        "change_pct": -14.6,
+        "score_year_avg": 51,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 1998,
+        "months": 12,
+        "partial": false,
+        "avg": 294.08,
+        "avg_today_dollars": 602.84,
+        "high": 308.0,
+        "high_month": "1998-04-30",
+        "low": 284.0,
+        "low_month": "1998-08-31",
+        "change_pct": -11.2,
+        "score_year_avg": 50,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 1999,
+        "months": 12,
+        "partial": false,
+        "avg": 278.75,
+        "avg_today_dollars": 559.14,
+        "high": 311.0,
+        "high_month": "1999-10-31",
+        "low": 256.0,
+        "low_month": "1999-07-31",
+        "change_pct": -5.2,
+        "score_year_avg": 52,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 2000,
+        "months": 12,
+        "partial": false,
+        "avg": 279.0,
+        "avg_today_dollars": 541.56,
+        "high": 300.0,
+        "high_month": "2000-02-29",
+        "low": 266.0,
+        "low_month": "2000-11-30",
+        "change_pct": 0.1,
+        "score_year_avg": 57,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 2001,
+        "months": 12,
+        "partial": false,
+        "avg": 270.83,
+        "avg_today_dollars": 511.1,
+        "high": 283.0,
+        "high_month": "2001-09-30",
+        "low": 260.0,
+        "low_month": "2001-04-30",
+        "change_pct": -2.9,
+        "score_year_avg": 66,
+        "zone_year": "Favorable"
+      },
+      {
+        "year": 2002,
+        "months": 12,
+        "partial": false,
+        "avg": 310.0,
+        "avg_today_dollars": 575.75,
+        "high": 332.0,
+        "high_month": "2002-12-31",
+        "low": 282.0,
+        "low_month": "2002-01-31",
+        "change_pct": 14.5,
+        "score_year_avg": 45,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 2003,
+        "months": 12,
+        "partial": false,
+        "avg": 363.58,
+        "avg_today_dollars": 660.11,
+        "high": 407.0,
+        "high_month": "2003-12-31",
+        "low": 328.0,
+        "low_month": "2003-04-30",
+        "change_pct": 17.3,
+        "score_year_avg": 57,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 2004,
+        "months": 12,
+        "partial": false,
+        "avg": 409.17,
+        "avg_today_dollars": 723.61,
+        "high": 442.0,
+        "high_month": "2004-12-31",
+        "low": 384.0,
+        "low_month": "2004-05-31",
+        "change_pct": 12.5,
+        "score_year_avg": 48,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 2005,
+        "months": 12,
+        "partial": false,
+        "avg": 444.83,
+        "avg_today_dollars": 760.83,
+        "high": 510.0,
+        "high_month": "2005-12-31",
+        "low": 422.0,
+        "low_month": "2005-05-31",
+        "change_pct": 8.7,
+        "score_year_avg": 67,
+        "zone_year": "Favorable"
+      },
+      {
+        "year": 2006,
+        "months": 12,
+        "partial": false,
+        "avg": 604.42,
+        "avg_today_dollars": 1001.72,
+        "high": 675.0,
+        "high_month": "2006-05-31",
+        "low": 550.0,
+        "low_month": "2006-01-31",
+        "change_pct": 35.9,
+        "score_year_avg": 44,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 2007,
+        "months": 12,
+        "partial": false,
+        "avg": 696.67,
+        "avg_today_dollars": 1121.9,
+        "high": 806.0,
+        "high_month": "2007-11-30",
+        "low": 631.0,
+        "low_month": "2007-01-31",
+        "change_pct": 15.3,
+        "score_year_avg": 50,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 2008,
+        "months": 12,
+        "partial": false,
+        "avg": 871.75,
+        "avg_today_dollars": 1353.42,
+        "high": 968.0,
+        "high_month": "2008-03-31",
+        "low": 761.0,
+        "low_month": "2008-11-30",
+        "change_pct": 25.1,
+        "score_year_avg": 49,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 2009,
+        "months": 12,
+        "partial": false,
+        "avg": 973.0,
+        "avg_today_dollars": 1514.31,
+        "high": 1135.0,
+        "high_month": "2009-12-31",
+        "low": 859.0,
+        "low_month": "2009-01-31",
+        "change_pct": 11.6,
+        "score_year_avg": 57,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 2010,
+        "months": 12,
+        "partial": false,
+        "avg": 1224.67,
+        "avg_today_dollars": 1875.83,
+        "high": 1391.0,
+        "high_month": "2010-12-31",
+        "low": 1095.0,
+        "low_month": "2010-02-28",
+        "change_pct": 25.9,
+        "score_year_avg": 52,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 2011,
+        "months": 12,
+        "partial": false,
+        "avg": 1569.17,
+        "avg_today_dollars": 2329.56,
+        "high": 1772.0,
+        "high_month": "2011-09-30",
+        "low": 1360.0,
+        "low_month": "2011-01-31",
+        "change_pct": 28.1,
+        "score_year_avg": 54,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 2012,
+        "months": 12,
+        "partial": false,
+        "avg": 1669.58,
+        "avg_today_dollars": 2429.65,
+        "high": 1747.0,
+        "high_month": "2012-10-31",
+        "low": 1589.0,
+        "low_month": "2012-05-31",
+        "change_pct": 6.4,
+        "score_year_avg": 60,
+        "zone_year": "Favorable"
+      },
+      {
+        "year": 2013,
+        "months": 12,
+        "partial": false,
+        "avg": 1411.67,
+        "avg_today_dollars": 2025.42,
+        "high": 1672.0,
+        "high_month": "2013-01-31",
+        "low": 1222.0,
+        "low_month": "2013-12-31",
+        "change_pct": -15.4,
+        "score_year_avg": 63,
+        "zone_year": "Favorable"
+      },
+      {
+        "year": 2014,
+        "months": 12,
+        "partial": false,
+        "avg": 1265.58,
+        "avg_today_dollars": 1786.45,
+        "high": 1336.0,
+        "high_month": "2014-03-31",
+        "low": 1175.0,
+        "low_month": "2014-11-30",
+        "change_pct": -10.3,
+        "score_year_avg": 60,
+        "zone_year": "Favorable"
+      },
+      {
+        "year": 2015,
+        "months": 12,
+        "partial": false,
+        "avg": 1160.75,
+        "avg_today_dollars": 1636.78,
+        "high": 1251.0,
+        "high_month": "2015-01-31",
+        "low": 1076.0,
+        "low_month": "2015-12-31",
+        "change_pct": -8.3,
+        "score_year_avg": 61,
+        "zone_year": "Favorable"
+      },
+      {
+        "year": 2016,
+        "months": 12,
+        "partial": false,
+        "avg": 1249.0,
+        "avg_today_dollars": 1738.71,
+        "high": 1340.0,
+        "high_month": "2016-08-31",
+        "low": 1098.0,
+        "low_month": "2016-01-31",
+        "change_pct": 7.6,
+        "score_year_avg": 56,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 2017,
+        "months": 12,
+        "partial": false,
+        "avg": 1257.5,
+        "avg_today_dollars": 1714.03,
+        "high": 1314.0,
+        "high_month": "2017-09-30",
+        "low": 1192.0,
+        "low_month": "2017-01-31",
+        "change_pct": 0.7,
+        "score_year_avg": 60,
+        "zone_year": "Favorable"
+      },
+      {
+        "year": 2018,
+        "months": 12,
+        "partial": false,
+        "avg": 1269.25,
+        "avg_today_dollars": 1689.31,
+        "high": 1335.0,
+        "high_month": "2018-04-30",
+        "low": 1198.0,
+        "low_month": "2018-09-30",
+        "change_pct": 0.9,
+        "score_year_avg": 61,
+        "zone_year": "Favorable"
+      },
+      {
+        "year": 2019,
+        "months": 12,
+        "partial": false,
+        "avg": 1392.58,
+        "avg_today_dollars": 1819.54,
+        "high": 1511.0,
+        "high_month": "2019-09-30",
+        "low": 1284.0,
+        "low_month": "2019-05-31",
+        "change_pct": 9.7,
+        "score_year_avg": 57,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 2020,
+        "months": 12,
+        "partial": false,
+        "avg": 1770.25,
+        "avg_today_dollars": 2284.58,
+        "high": 1969.0,
+        "high_month": "2020-08-31",
+        "low": 1561.0,
+        "low_month": "2020-01-31",
+        "change_pct": 27.1,
+        "score_year_avg": 52,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 2021,
+        "months": 12,
+        "partial": false,
+        "avg": 1799.58,
+        "avg_today_dollars": 2220.09,
+        "high": 1867.0,
+        "high_month": "2021-01-31",
+        "low": 1718.0,
+        "low_month": "2021-03-31",
+        "change_pct": 1.7,
+        "score_year_avg": 57,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 2022,
+        "months": 12,
+        "partial": false,
+        "avg": 1800.75,
+        "avg_today_dollars": 2058.09,
+        "high": 1948.0,
+        "high_month": "2022-03-31",
+        "low": 1664.0,
+        "low_month": "2022-10-31",
+        "change_pct": 0.1,
+        "score_year_avg": 50,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 2023,
+        "months": 12,
+        "partial": false,
+        "avg": 1942.75,
+        "avg_today_dollars": 2130.34,
+        "high": 2026.0,
+        "high_month": "2023-12-31",
+        "low": 1855.0,
+        "low_month": "2023-02-28",
+        "change_pct": 7.9,
+        "score_year_avg": 46,
+        "zone_year": "Mixed"
+      },
+      {
+        "year": 2024,
+        "months": 12,
+        "partial": false,
+        "avg": 2387.58,
+        "avg_today_dollars": 2541.69,
+        "high": 2690.0,
+        "high_month": "2024-10-31",
+        "low": 2023.0,
+        "low_month": "2024-02-29",
+        "change_pct": 22.9,
+        "score_year_avg": 37,
+        "zone_year": "Unfavorable"
+      },
+      {
+        "year": 2025,
+        "months": 12,
+        "partial": false,
+        "avg": 3441.5,
+        "avg_today_dollars": 3566.33,
+        "high": 4309.0,
+        "high_month": "2025-12-31",
+        "low": 2710.0,
+        "low_month": "2025-01-31",
+        "change_pct": 44.1,
+        "score_year_avg": 37,
+        "zone_year": "Unfavorable"
+      },
+      {
+        "year": 2026,
+        "months": 9,
+        "partial": true,
+        "avg": 4552.0,
+        "avg_today_dollars": 4588.78,
+        "high": 5020.0,
+        "high_month": "2026-02-28",
+        "low": 4073.0,
+        "low_month": "2026-07-31",
+        "change_pct": 32.3,
+        "score_year_avg": 34,
+        "zone_year": "Unfavorable"
+      }
+    ],
+    "first_full_year": 1971,
+    "last_full_year": 2025,
+    "multiple_nominal": 84.1,
+    "multiple_real": 10.6,
+    "record_month": "2026-02-28",
+    "record_price": 5020.0,
+    "real_record_month": "2026-02-28",
+    "real_record_today_dollars": 5122.27,
+    "years_up": 38,
+    "years_down": 16,
+    "biggest_rise": 1980,
+    "biggest_rise_pct": 98.2,
+    "biggest_fall": 1981,
+    "biggest_fall_pct": -24.4,
+    "cpi_months_filled": [
+      "2025-10-31",
+      "2026-09-30"
+    ]
+  },
+  "gold_silver_ratio": {
+    "measure": "World Bank monthly average gold price divided by the monthly average silver price, both in US dollars per troy ounce, 1960 onward; what followed is measured on the record window from 1971",
+    "first_month": "1960-01-31",
+    "last_month": "2026-09-30",
+    "last_ratio": 66.9,
+    "last_gold": 4319.0,
+    "last_silver": 64.6,
+    "last_percentile_since_1960": 64.2,
+    "last_band": "60 to 80",
+    "median_since_1960": 56.6,
+    "median_since_1971": 63.2,
+    "months_since_1960": 801,
+    "months_in_record": 669,
+    "months_at_or_above_80_since_1960": 107,
+    "months_below_40_since_1960": 255,
+    "highest": {
+      "month": "2020-04-30",
+      "ratio": 111.5
+    },
+    "lowest": {
+      "month": "1968-06-30",
+      "ratio": 16.4
+    },
+    "ago_1y": {
+      "month": "2025-09-30",
+      "ratio": 85.7
+    },
+    "ago_5y": {
+      "month": "2021-09-30",
+      "ratio": 76.5
+    },
+    "ago_10y": {
+      "month": "2016-09-30",
+      "ratio": 68.4
+    },
+    "top5": [
+      {
+        "month": "2020-04-30",
+        "ratio": 111.5
+      },
+      {
+        "month": "2020-03-31",
+        "ratio": 106.8
+      },
+      {
+        "month": "2020-05-31",
+        "ratio": 105.3
+      },
+      {
+        "month": "2025-05-31",
+        "ratio": 100.9
+      },
+      {
+        "month": "2025-04-30",
+        "ratio": 99.9
+      }
+    ],
+    "bottom5": [
+      {
+        "month": "1968-06-30",
+        "ratio": 16.4
+      },
+      {
+        "month": "1967-12-31",
+        "ratio": 16.7
+      },
+      {
+        "month": "1968-03-31",
+        "ratio": 16.8
+      },
+      {
+        "month": "1968-07-31",
+        "ratio": 17.0
+      },
+      {
+        "month": "1968-05-31",
+        "ratio": 17.1
+      }
+    ],
+    "decades": [
+      {
+        "decade": "1960s",
+        "months": 120,
+        "partial": false,
+        "median": 26.9,
+        "low": {
+          "month": "1968-06-30",
+          "ratio": 16.4
+        },
+        "high": {
+          "month": "1960-01-31",
+          "ratio": 38.9
+        }
+      },
+      {
+        "decade": "1970s",
+        "months": 120,
+        "partial": false,
+        "median": 32.4,
+        "low": {
+          "month": "1970-01-31",
+          "ratio": 18.4
+        },
+        "high": {
+          "month": "1973-06-30",
+          "ratio": 46.2
+        }
+      },
+      {
+        "decade": "1980s",
+        "months": 120,
+        "partial": false,
+        "median": 50.6,
+        "low": {
+          "month": "1980-01-31",
+          "ratio": 17.4
+        },
+        "high": {
+          "month": "1986-10-31",
+          "ratio": 75.7
+        }
+      },
+      {
+        "decade": "1990s",
+        "months": 120,
+        "partial": false,
+        "median": 73.9,
+        "low": {
+          "month": "1998-02-28",
+          "ratio": 43.7
+        },
+        "high": {
+          "month": "1991-02-28",
+          "ratio": 98.4
+        }
+      },
+      {
+        "decade": "2000s",
+        "months": 120,
+        "partial": false,
+        "median": 60.5,
+        "low": {
+          "month": "2006-12-31",
+          "ratio": 47.4
+        },
+        "high": {
+          "month": "2008-12-31",
+          "ratio": 79.2
+        }
+      },
+      {
+        "decade": "2010s",
+        "months": 120,
+        "partial": false,
+        "median": 68.9,
+        "low": {
+          "month": "2011-04-30",
+          "ratio": 34.7
+        },
+        "high": {
+          "month": "2019-06-30",
+          "ratio": 90.6
+        }
+      },
+      {
+        "decade": "2020s",
+        "months": 81,
+        "partial": true,
+        "median": 82.0,
+        "low": {
+          "month": "2026-01-31",
+          "ratio": 51.6
+        },
+        "high": {
+          "month": "2020-04-30",
+          "ratio": 111.5
+        }
+      }
+    ],
+    "years": [
+      {
+        "year": 1960,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 38.9,
+        "gold_avg": 35.0,
+        "silver_avg": 0.9
+      },
+      {
+        "year": 1961,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 38.6,
+        "gold_avg": 35.0,
+        "silver_avg": 0.91
+      },
+      {
+        "year": 1962,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 32.8,
+        "gold_avg": 35.0,
+        "silver_avg": 1.07
+      },
+      {
+        "year": 1963,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 27.1,
+        "gold_avg": 35.0,
+        "silver_avg": 1.29
+      },
+      {
+        "year": 1964,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 26.9,
+        "gold_avg": 35.0,
+        "silver_avg": 1.3
+      },
+      {
+        "year": 1965,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 26.9,
+        "gold_avg": 35.0,
+        "silver_avg": 1.3
+      },
+      {
+        "year": 1966,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 26.9,
+        "gold_avg": 35.0,
+        "silver_avg": 1.3
+      },
+      {
+        "year": 1967,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 23.2,
+        "gold_avg": 35.0,
+        "silver_avg": 1.56
+      },
+      {
+        "year": 1968,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 18.1,
+        "gold_avg": 38.92,
+        "silver_avg": 2.16
+      },
+      {
+        "year": 1969,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 22.9,
+        "gold_avg": 40.92,
+        "silver_avg": 1.79
+      },
+      {
+        "year": 1970,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 20.3,
+        "gold_avg": 35.83,
+        "silver_avg": 1.77
+      },
+      {
+        "year": 1971,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 26.9,
+        "gold_avg": 40.92,
+        "silver_avg": 1.54
+      },
+      {
+        "year": 1972,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 34.5,
+        "gold_avg": 58.17,
+        "silver_avg": 1.68
+      },
+      {
+        "year": 1973,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 38.2,
+        "gold_avg": 97.33,
+        "silver_avg": 2.55
+      },
+      {
+        "year": 1974,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 34.2,
+        "gold_avg": 159.25,
+        "silver_avg": 4.69
+      },
+      {
+        "year": 1975,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 36.6,
+        "gold_avg": 160.92,
+        "silver_avg": 4.41
+      },
+      {
+        "year": 1976,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 28.6,
+        "gold_avg": 124.83,
+        "silver_avg": 4.38
+      },
+      {
+        "year": 1977,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 31.9,
+        "gold_avg": 147.67,
+        "silver_avg": 4.63
+      },
+      {
+        "year": 1978,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 35.6,
+        "gold_avg": 193.17,
+        "silver_avg": 5.42
+      },
+      {
+        "year": 1979,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 29.7,
+        "gold_avg": 306.75,
+        "silver_avg": 11.11
+      },
+      {
+        "year": 1980,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 32.0,
+        "gold_avg": 607.83,
+        "silver_avg": 20.8
+      },
+      {
+        "year": 1981,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 44.4,
+        "gold_avg": 459.75,
+        "silver_avg": 10.53
+      },
+      {
+        "year": 1982,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 47.9,
+        "gold_avg": 375.75,
+        "silver_avg": 7.94
+      },
+      {
+        "year": 1983,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 37.4,
+        "gold_avg": 422.58,
+        "silver_avg": 11.42
+      },
+      {
+        "year": 1984,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 44.5,
+        "gold_avg": 360.5,
+        "silver_avg": 8.15
+      },
+      {
+        "year": 1985,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 51.9,
+        "gold_avg": 318.0,
+        "silver_avg": 6.13
+      },
+      {
+        "year": 1986,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 67.7,
+        "gold_avg": 367.75,
+        "silver_avg": 5.44
+      },
+      {
+        "year": 1987,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 64.5,
+        "gold_avg": 446.42,
+        "silver_avg": 7.01
+      },
+      {
+        "year": 1988,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 67.1,
+        "gold_avg": 437.08,
+        "silver_avg": 6.52
+      },
+      {
+        "year": 1989,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 69.3,
+        "gold_avg": 381.42,
+        "silver_avg": 5.52
+      },
+      {
+        "year": 1990,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 79.6,
+        "gold_avg": 383.5,
+        "silver_avg": 4.84
+      },
+      {
+        "year": 1991,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 89.8,
+        "gold_avg": 362.25,
+        "silver_avg": 4.04
+      },
+      {
+        "year": 1992,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 86.9,
+        "gold_avg": 343.67,
+        "silver_avg": 3.96
+      },
+      {
+        "year": 1993,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 83.9,
+        "gold_avg": 359.67,
+        "silver_avg": 4.31
+      },
+      {
+        "year": 1994,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 72.8,
+        "gold_avg": 383.92,
+        "silver_avg": 5.28
+      },
+      {
+        "year": 1995,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 74.0,
+        "gold_avg": 384.17,
+        "silver_avg": 5.21
+      },
+      {
+        "year": 1996,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 74.7,
+        "gold_avg": 387.58,
+        "silver_avg": 5.2
+      },
+      {
+        "year": 1997,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 67.9,
+        "gold_avg": 331.17,
+        "silver_avg": 4.91
+      },
+      {
+        "year": 1998,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 53.4,
+        "gold_avg": 294.08,
+        "silver_avg": 5.56
+      },
+      {
+        "year": 1999,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 53.4,
+        "gold_avg": 278.75,
+        "silver_avg": 5.22
+      },
+      {
+        "year": 2000,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 56.3,
+        "gold_avg": 279.0,
+        "silver_avg": 4.96
+      },
+      {
+        "year": 2001,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 61.8,
+        "gold_avg": 270.83,
+        "silver_avg": 4.39
+      },
+      {
+        "year": 2002,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 67.6,
+        "gold_avg": 310.0,
+        "silver_avg": 4.59
+      },
+      {
+        "year": 2003,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 74.6,
+        "gold_avg": 363.58,
+        "silver_avg": 4.88
+      },
+      {
+        "year": 2004,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 61.7,
+        "gold_avg": 409.17,
+        "silver_avg": 6.66
+      },
+      {
+        "year": 2005,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 61.0,
+        "gold_avg": 444.83,
+        "silver_avg": 7.3
+      },
+      {
+        "year": 2006,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 52.7,
+        "gold_avg": 604.42,
+        "silver_avg": 11.56
+      },
+      {
+        "year": 2007,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 52.1,
+        "gold_avg": 696.67,
+        "silver_avg": 13.38
+      },
+      {
+        "year": 2008,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 60.4,
+        "gold_avg": 871.75,
+        "silver_avg": 15.0
+      },
+      {
+        "year": 2009,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 67.0,
+        "gold_avg": 973.0,
+        "silver_avg": 14.65
+      },
+      {
+        "year": 2010,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 62.0,
+        "gold_avg": 1224.67,
+        "silver_avg": 20.15
+      },
+      {
+        "year": 2011,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 45.0,
+        "gold_avg": 1569.17,
+        "silver_avg": 35.23
+      },
+      {
+        "year": 2012,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 53.8,
+        "gold_avg": 1669.58,
+        "silver_avg": 31.14
+      },
+      {
+        "year": 2013,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 59.7,
+        "gold_avg": 1411.67,
+        "silver_avg": 23.86
+      },
+      {
+        "year": 2014,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 66.7,
+        "gold_avg": 1265.58,
+        "silver_avg": 19.07
+      },
+      {
+        "year": 2015,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 73.9,
+        "gold_avg": 1160.75,
+        "silver_avg": 15.72
+      },
+      {
+        "year": 2016,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 73.2,
+        "gold_avg": 1249.0,
+        "silver_avg": 17.16
+      },
+      {
+        "year": 2017,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 73.8,
+        "gold_avg": 1257.5,
+        "silver_avg": 17.06
+      },
+      {
+        "year": 2018,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 80.9,
+        "gold_avg": 1269.25,
+        "silver_avg": 15.72
+      },
+      {
+        "year": 2019,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 85.9,
+        "gold_avg": 1392.58,
+        "silver_avg": 16.22
+      },
+      {
+        "year": 2020,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 88.8,
+        "gold_avg": 1770.25,
+        "silver_avg": 20.54
+      },
+      {
+        "year": 2021,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 71.8,
+        "gold_avg": 1799.58,
+        "silver_avg": 25.17
+      },
+      {
+        "year": 2022,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 83.1,
+        "gold_avg": 1800.75,
+        "silver_avg": 21.78
+      },
+      {
+        "year": 2023,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 83.1,
+        "gold_avg": 1942.75,
+        "silver_avg": 23.41
+      },
+      {
+        "year": 2024,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 84.7,
+        "gold_avg": 2387.58,
+        "silver_avg": 28.27
+      },
+      {
+        "year": 2025,
+        "months": 12,
+        "partial": false,
+        "avg_ratio": 88.1,
+        "gold_avg": 3441.5,
+        "silver_avg": 39.8
+      },
+      {
+        "year": 2026,
+        "months": 9,
+        "partial": true,
+        "avg_ratio": 62.6,
+        "gold_avg": 4552.0,
+        "silver_avg": 73.48
+      }
+    ],
+    "bands": [
+      {
+        "band": "Below 40",
+        "lo": 0,
+        "hi": 40,
+        "n_months": 123,
+        "first_month": "1971-01-31",
+        "last_month": "2011-04-30",
+        "runs": [
+          {
+            "from": "1971-01-31",
+            "to": "1973-03-31",
+            "months": 27
+          },
+          {
+            "from": "1973-09-30",
+            "to": "1974-11-30",
+            "months": 15
+          },
+          {
+            "from": "1975-05-31",
+            "to": "1980-04-30",
+            "months": 60
+          }
+        ],
+        "median_ratio": 33.1,
+        "median_ratio_1y_later": 34.9,
+        "median_ratio_5y_later": 40.5,
+        "share_ratio_lower_1y_pct": 27.6,
+        "share_ratio_lower_5y_pct": 25.2,
+        "median_gold_fwd_1y_nominal_pct": 30.0,
+        "median_gold_fwd_5y_nominal_pct": 127.0,
+        "median_silver_fwd_1y_nominal_pct": 9.8,
+        "median_silver_fwd_5y_nominal_pct": 103.4,
+        "median_gold_fwd_5y_real_pct": 48.4,
+        "n_with_1y": 123,
+        "n_with_5y": 123
+      },
+      {
+        "band": "40 to 60",
+        "lo": 40,
+        "hi": 60,
+        "n_months": 175,
+        "first_month": "1973-04-30",
+        "last_month": "2026-05-31",
+        "runs": [
+          {
+            "from": "1981-03-31",
+            "to": "1982-12-31",
+            "months": 22
+          },
+          {
+            "from": "1983-11-30",
+            "to": "1986-02-28",
+            "months": 28
+          },
+          {
+            "from": "1997-12-31",
+            "to": "2001-04-30",
+            "months": 41
+          },
+          {
+            "from": "2006-02-28",
+            "to": "2008-08-31",
+            "months": 31
+          },
+          {
+            "from": "2011-05-31",
+            "to": "2013-04-30",
+            "months": 24
+          }
+        ],
+        "median_ratio": 52.0,
+        "median_ratio_1y_later": 55.4,
+        "median_ratio_5y_later": 66.6,
+        "share_ratio_lower_1y_pct": 26.0,
+        "share_ratio_lower_5y_pct": 15.0,
+        "median_gold_fwd_1y_nominal_pct": 0.6,
+        "median_gold_fwd_5y_nominal_pct": 26.8,
+        "median_silver_fwd_1y_nominal_pct": -7.9,
+        "median_silver_fwd_5y_nominal_pct": -12.7,
+        "median_gold_fwd_5y_real_pct": 8.3,
+        "n_with_1y": 173,
+        "n_with_5y": 173
+      },
+      {
+        "band": "60 to 80",
+        "lo": 60,
+        "hi": 80,
+        "n_months": 264,
+        "first_month": "1986-03-31",
+        "last_month": "2026-09-30",
+        "runs": [
+          {
+            "from": "1986-03-31",
+            "to": "1987-04-30",
+            "months": 14
+          },
+          {
+            "from": "1987-09-30",
+            "to": "1990-08-31",
+            "months": 36
+          },
+          {
+            "from": "1993-12-31",
+            "to": "1995-01-31",
+            "months": 14
+          },
+          {
+            "from": "1995-04-30",
+            "to": "1997-11-30",
+            "months": 32
+          },
+          {
+            "from": "2001-05-31",
+            "to": "2004-02-29",
+            "months": 34
+          },
+          {
+            "from": "2008-09-30",
+            "to": "2010-09-30",
+            "months": 25
+          },
+          {
+            "from": "2013-10-31",
+            "to": "2016-02-29",
+            "months": 29
+          },
+          {
+            "from": "2016-04-30",
+            "to": "2018-01-31",
+            "months": 22
+          },
+          {
+            "from": "2020-08-31",
+            "to": "2022-04-30",
+            "months": 21
+          }
+        ],
+        "median_ratio": 70.9,
+        "median_ratio_1y_later": 71.8,
+        "median_ratio_5y_later": 70.7,
+        "share_ratio_lower_1y_pct": 44.1,
+        "share_ratio_lower_5y_pct": 46.7,
+        "median_gold_fwd_1y_nominal_pct": 1.9,
+        "median_gold_fwd_5y_nominal_pct": 12.0,
+        "median_silver_fwd_1y_nominal_pct": 0.0,
+        "median_silver_fwd_5y_nominal_pct": 7.0,
+        "median_gold_fwd_5y_real_pct": 1.8,
+        "n_with_1y": 256,
+        "n_with_5y": 246
+      },
+      {
+        "band": "80 and above",
+        "lo": 80,
+        "hi": 999,
+        "n_months": 107,
+        "first_month": "1990-09-30",
+        "last_month": "2025-11-30",
+        "runs": [
+          {
+            "from": "1990-09-30",
+            "to": "1993-06-30",
+            "months": 34
+          },
+          {
+            "from": "2018-08-31",
+            "to": "2020-07-31",
+            "months": 24
+          },
+          {
+            "from": "2023-01-31",
+            "to": "2024-04-30",
+            "months": 16
+          },
+          {
+            "from": "2024-07-31",
+            "to": "2025-11-30",
+            "months": 17
+          }
+        ],
+        "median_ratio": 85.8,
+        "median_ratio_1y_later": 83.1,
+        "median_ratio_5y_later": 74.4,
+        "share_ratio_lower_1y_pct": 58.1,
+        "share_ratio_lower_5y_pct": 83.6,
+        "median_gold_fwd_1y_nominal_pct": 14.0,
+        "median_gold_fwd_5y_nominal_pct": 8.7,
+        "median_silver_fwd_1y_nominal_pct": 21.0,
+        "median_silver_fwd_5y_nominal_pct": 35.0,
+        "median_gold_fwd_5y_real_pct": -5.5,
+        "n_with_1y": 105,
+        "n_with_5y": 67
+      }
+    ]
   }
 }

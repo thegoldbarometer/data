@@ -1,36 +1,36 @@
 {
   "version": "1.0",
-  "generated_at": "2026-09-06T10:00:11",
+  "generated_at": "2026-10-06T10:00:09",
   "backtest_window": {
     "start": "1971-01-31",
-    "end": "2026-08-31",
-    "n_months": 668
+    "end": "2026-09-30",
+    "n_months": 669
   },
   "gold_price_source": "World Bank Pink Sheet (CC BY 4.0), monthly USD/toz",
   "cpi_source": "BLS CUSR0000SA0 (US CPI-U)",
   "pillar_coverage": {
     "real_rates": {
-      "n_months": 668,
+      "n_months": 669,
       "first_active_month": "1971-01-31"
     },
     "entry_price": {
-      "n_months": 668,
+      "n_months": 669,
       "first_active_month": "1971-01-31"
     },
     "structural_demand": {
-      "n_months": 277,
+      "n_months": 278,
       "first_active_month": "2003-08-31"
     },
     "dollar": {
-      "n_months": 189,
+      "n_months": 190,
       "first_active_month": "2010-12-31"
     },
     "positioning": {
-      "n_months": 184,
+      "n_months": 185,
       "first_active_month": "2011-05-31"
     },
     "volatility": {
-      "n_months": 145,
+      "n_months": 146,
       "first_active_month": "2014-08-31"
     },
     "premiums": {
@@ -374,9 +374,9 @@
       "band": "40-59",
       "n_months": 379,
       "fwd_1y_nominal": {
-        "n": 376,
-        "median": 6.51,
-        "mean": 12.99,
+        "n": 377,
+        "median": 6.53,
+        "mean": 13.0,
         "p10": -10.62,
         "p90": 41.33,
         "min": -36.39,
@@ -394,9 +394,9 @@
         "unit": "percent"
       },
       "maxdd_1y": {
-        "n": 376,
-        "median": -3.75,
-        "mean": -5.89,
+        "n": 377,
+        "median": -3.68,
+        "mean": -5.88,
         "p10": -14.58,
         "p90": 0.0,
         "min": -39.32,
@@ -404,9 +404,9 @@
         "unit": "percent"
       },
       "fwd_3y_nominal": {
-        "n": 369,
-        "median": 17.34,
-        "mean": 44.53,
+        "n": 370,
+        "median": 17.51,
+        "mean": 44.75,
         "p10": -21.23,
         "p90": 129.86,
         "min": -40.39,
@@ -414,19 +414,19 @@
         "unit": "percent"
       },
       "fwd_3y_real": {
-        "n": 367,
-        "median": 4.88,
-        "mean": 25.59,
+        "n": 368,
+        "median": 4.9,
+        "mean": 25.82,
         "p10": -28.48,
-        "p90": 98.92,
+        "p90": 99.43,
         "min": -49.91,
         "max": 284.83,
         "unit": "percent"
       },
       "maxdd_3y": {
-        "n": 369,
+        "n": 370,
         "median": -6.86,
-        "mean": -10.48,
+        "mean": -10.45,
         "p10": -28.96,
         "p90": 0.0,
         "min": -53.33,
@@ -434,9 +434,9 @@
         "unit": "percent"
       },
       "fwd_5y_nominal": {
-        "n": 345,
-        "median": 43.81,
-        "mean": 58.21,
+        "n": 346,
+        "median": 43.93,
+        "mean": 58.46,
         "p10": -26.11,
         "p90": 160.32,
         "min": -55.11,
@@ -444,9 +444,9 @@
         "unit": "percent"
       },
       "fwd_5y_real": {
-        "n": 343,
-        "median": 19.41,
-        "mean": 27.81,
+        "n": 344,
+        "median": 19.82,
+        "mean": 28.03,
         "p10": -33.84,
         "p90": 115.92,
         "min": -66.87,
@@ -454,9 +454,9 @@
         "unit": "percent"
       },
       "maxdd_5y": {
-        "n": 345,
-        "median": -8.66,
-        "mean": -12.53,
+        "n": 346,
+        "median": -8.65,
+        "mean": -12.51,
         "p10": -34.39,
         "p90": 0.0,
         "min": -55.64,
@@ -464,9 +464,9 @@
         "unit": "percent"
       },
       "fwd_10y_nominal": {
-        "n": 302,
-        "median": 81.47,
-        "mean": 127.15,
+        "n": 303,
+        "median": 83.65,
+        "mean": 127.48,
         "p10": -25.47,
         "p90": 284.64,
         "min": -43.55,
@@ -474,29 +474,29 @@
         "unit": "percent"
       },
       "fwd_10y_real": {
-        "n": 301,
-        "median": 27.58,
-        "mean": 56.01,
+        "n": 302,
+        "median": 27.83,
+        "mean": 56.28,
         "p10": -43.86,
-        "p90": 182.1,
+        "p90": 181.15,
         "min": -64.27,
         "max": 415.76,
         "unit": "percent"
       },
       "maxdd_10y": {
-        "n": 302,
-        "median": -13.13,
-        "mean": -16.32,
+        "n": 303,
+        "median": -12.93,
+        "mean": -16.31,
         "p10": -35.19,
         "p90": 0.0,
         "min": -55.7,
         "max": 0.0,
         "unit": "percent"
       },
-      "hit_rate_1y_vs_all_median": 0.5106382978723404,
+      "hit_rate_1y_vs_all_median": 0.5092838196286472,
       "dca_vs_lump_5y_pct": {
-        "n": 345,
-        "median": -2.69,
+        "n": 346,
+        "median": -2.68,
         "mean": -3.6,
         "p10": -14.62,
         "p90": 7.0,
@@ -505,9 +505,9 @@
         "unit": "percent"
       },
       "lump_5y_return_pct": {
-        "n": 345,
-        "median": 43.81,
-        "mean": 58.21,
+        "n": 346,
+        "median": 43.93,
+        "mean": 58.46,
         "p10": -26.11,
         "p90": 160.32,
         "min": -55.11,
@@ -515,9 +515,9 @@
         "unit": "percent"
       },
       "dca_5y_return_pct": {
-        "n": 345,
-        "median": 42.74,
-        "mean": 50.01,
+        "n": 346,
+        "median": 42.87,
+        "mean": 50.26,
         "p10": -26.07,
         "p90": 142.06,
         "min": -49.65,
@@ -528,7 +528,7 @@
     "Unfavorable": {
       "zone": "Unfavorable",
       "band": "20-39",
-      "n_months": 152,
+      "n_months": 153,
       "fwd_1y_nominal": {
         "n": 143,
         "median": 3.66,
@@ -540,11 +540,11 @@
         "unit": "percent"
       },
       "fwd_1y_real": {
-        "n": 141,
-        "median": -0.41,
-        "mean": 5.37,
+        "n": 142,
+        "median": 0.08,
+        "mean": 5.52,
         "p10": -18.94,
-        "p90": 35.56,
+        "p90": 34.92,
         "min": -36.25,
         "max": 76.36,
         "unit": "percent"
@@ -867,18 +867,18 @@
       "zone": "Mixed",
       "band": "40-59",
       "n_months": 379,
-      "opportunity_cost_of_selling_median_1y": 0.06513084905044697,
+      "opportunity_cost_of_selling_median_1y": 0.0653266331658291,
       "drawdown_avoided_by_selling_median_1y": 0.0,
-      "opportunity_cost_of_selling_median_3y": 0.17344398340248968,
+      "opportunity_cost_of_selling_median_3y": 0.1750553250345782,
       "drawdown_avoided_by_selling_median_3y": 0.0,
-      "opportunity_cost_of_selling_median_5y": 0.43808777429467094,
+      "opportunity_cost_of_selling_median_5y": 0.4392819823854307,
       "drawdown_avoided_by_selling_median_5y": 0.0,
-      "median_maxdd_avoided_by_selling_1y": 0.03747457361915196
+      "median_maxdd_avoided_by_selling_1y": 0.03679653679653683
     },
     "Unfavorable": {
       "zone": "Unfavorable",
       "band": "20-39",
-      "n_months": 152,
+      "n_months": 153,
       "opportunity_cost_of_selling_median_1y": 0.03664921465968596,
       "drawdown_avoided_by_selling_median_1y": 0.0,
       "opportunity_cost_of_selling_median_3y": 0.0,
@@ -972,7 +972,7 @@
           ],
           [
             "Mixed",
-            6.51
+            6.53
           ],
           [
             "Favorable",
@@ -993,7 +993,7 @@
           {
             "lower_zone": "Mixed",
             "higher_zone": "Favorable",
-            "lower_median_pct": 6.51,
+            "lower_median_pct": 6.53,
             "higher_median_pct": 5.8
           }
         ]
@@ -1010,7 +1010,7 @@
           ],
           [
             "Mixed",
-            17.34
+            17.51
           ],
           [
             "Favorable",
@@ -1042,7 +1042,7 @@
           ],
           [
             "Mixed",
-            43.81
+            43.93
           ],
           [
             "Favorable",
@@ -1074,7 +1074,7 @@
           ],
           [
             "Mixed",
-            81.47
+            83.65
           ],
           [
             "Favorable",
@@ -1487,29 +1487,29 @@
             "unit": "percent"
           },
           "fwd_3y_nominal": {
-            "n": 387,
-            "median": 21.28,
-            "mean": 43.66,
+            "n": 388,
+            "median": 21.42,
+            "mean": 43.87,
             "p10": -20.0,
-            "p90": 117.6,
+            "p90": 117.97,
             "min": -40.39,
             "max": 411.36,
             "unit": "percent"
           },
           "fwd_3y_real": {
-            "n": 385,
-            "median": 7.09,
-            "mean": 25.59,
+            "n": 386,
+            "median": 7.6,
+            "mean": 25.81,
             "p10": -27.56,
-            "p90": 89.55,
+            "p90": 91.07,
             "min": -49.91,
             "max": 284.83,
             "unit": "percent"
           },
           "maxdd_3y": {
-            "n": 387,
-            "median": -6.91,
-            "mean": -10.73,
+            "n": 388,
+            "median": -6.88,
+            "mean": -10.7,
             "p10": -30.77,
             "p90": 0.0,
             "min": -53.33,
@@ -1517,9 +1517,9 @@
             "unit": "percent"
           },
           "fwd_5y_nominal": {
-            "n": 364,
-            "median": 50.27,
-            "mean": 64.09,
+            "n": 365,
+            "median": 50.35,
+            "mean": 64.31,
             "p10": -21.39,
             "p90": 163.68,
             "min": -55.11,
@@ -1527,9 +1527,9 @@
             "unit": "percent"
           },
           "fwd_5y_real": {
-            "n": 362,
-            "median": 25.71,
-            "mean": 32.62,
+            "n": 363,
+            "median": 26.07,
+            "mean": 32.81,
             "p10": -28.39,
             "p90": 118.19,
             "min": -66.87,
@@ -1537,9 +1537,9 @@
             "unit": "percent"
           },
           "maxdd_5y": {
-            "n": 364,
-            "median": -8.37,
-            "mean": -12.24,
+            "n": 365,
+            "median": -8.31,
+            "mean": -12.22,
             "p10": -34.39,
             "p90": 0.0,
             "min": -55.64,
@@ -1547,9 +1547,9 @@
             "unit": "percent"
           },
           "fwd_10y_nominal": {
-            "n": 304,
-            "median": 93.11,
-            "mean": 143.33,
+            "n": 305,
+            "median": 93.29,
+            "mean": 143.6,
             "p10": -6.38,
             "p90": 297.19,
             "min": -43.55,
@@ -1557,9 +1557,9 @@
             "unit": "percent"
           },
           "fwd_10y_real": {
-            "n": 302,
-            "median": 35.21,
-            "mean": 65.92,
+            "n": 303,
+            "median": 35.39,
+            "mean": 66.15,
             "p10": -39.21,
             "p90": 196.8,
             "min": -64.27,
@@ -1567,7 +1567,7 @@
             "unit": "percent"
           },
           "maxdd_10y": {
-            "n": 304,
+            "n": 305,
             "median": -11.42,
             "mean": -15.09,
             "p10": -35.65,
@@ -1576,11 +1576,11 @@
             "max": 0.0,
             "unit": "percent"
           },
-          "hit_rate_1y_vs_all_median": 0.5204081632653061,
+          "hit_rate_1y_vs_all_median": 0.5178571428571429,
           "dca_vs_lump_5y_pct": {
-            "n": 364,
-            "median": -3.5,
-            "mean": -3.32,
+            "n": 365,
+            "median": -3.45,
+            "mean": -3.31,
             "p10": -14.25,
             "p90": 8.0,
             "min": -36.47,
@@ -1588,9 +1588,9 @@
             "unit": "percent"
           },
           "lump_5y_return_pct": {
-            "n": 364,
-            "median": 50.27,
-            "mean": 64.09,
+            "n": 365,
+            "median": 50.35,
+            "mean": 64.31,
             "p10": -21.39,
             "p90": 163.68,
             "min": -55.11,
@@ -1598,9 +1598,9 @@
             "unit": "percent"
           },
           "dca_5y_return_pct": {
-            "n": 364,
-            "median": 46.03,
-            "mean": 56.55,
+            "n": 365,
+            "median": 46.09,
+            "mean": 56.77,
             "p10": -23.25,
             "p90": 145.33,
             "min": -49.65,
@@ -1611,11 +1611,11 @@
         "Unfavorable": {
           "zone": "Unfavorable",
           "band": "25-44",
-          "n_months": 171,
+          "n_months": 172,
           "fwd_1y_nominal": {
-            "n": 159,
-            "median": 3.66,
-            "mean": 9.66,
+            "n": 160,
+            "median": 3.69,
+            "mean": 9.71,
             "p10": -12.35,
             "p90": 40.4,
             "min": -29.44,
@@ -1623,9 +1623,9 @@
             "unit": "percent"
           },
           "fwd_1y_real": {
-            "n": 157,
+            "n": 158,
             "median": -0.42,
-            "mean": 5.6,
+            "mean": 5.74,
             "p10": -16.22,
             "p90": 35.01,
             "min": -33.82,
@@ -1633,9 +1633,9 @@
             "unit": "percent"
           },
           "maxdd_1y": {
-            "n": 159,
-            "median": -2.58,
-            "mean": -5.37,
+            "n": 160,
+            "median": -2.5,
+            "mean": -5.33,
             "p10": -14.32,
             "p90": 0.0,
             "min": -33.47,
@@ -1732,7 +1732,7 @@
             "max": 0.0,
             "unit": "percent"
           },
-          "hit_rate_1y_vs_all_median": 0.44654088050314467,
+          "hit_rate_1y_vs_all_median": 0.45,
           "dca_vs_lump_5y_pct": {
             "n": 139,
             "median": -0.11,
@@ -2143,9 +2143,9 @@
             "unit": "percent"
           },
           "fwd_5y_nominal": {
-            "n": 214,
-            "median": 59.75,
-            "mean": 82.57,
+            "n": 215,
+            "median": 59.85,
+            "mean": 82.85,
             "p10": -18.24,
             "p90": 186.08,
             "min": -50.7,
@@ -2153,9 +2153,9 @@
             "unit": "percent"
           },
           "fwd_5y_real": {
-            "n": 213,
-            "median": 31.48,
-            "mean": 47.24,
+            "n": 214,
+            "median": 32.02,
+            "mean": 47.49,
             "p10": -25.89,
             "p90": 137.65,
             "min": -62.19,
@@ -2163,9 +2163,9 @@
             "unit": "percent"
           },
           "maxdd_5y": {
-            "n": 214,
-            "median": -8.01,
-            "mean": -12.53,
+            "n": 215,
+            "median": -7.96,
+            "mean": -12.5,
             "p10": -34.75,
             "p90": 0.0,
             "min": -53.5,
@@ -2202,10 +2202,10 @@
             "max": 0.0,
             "unit": "percent"
           },
-          "hit_rate_1y_vs_all_median": 0.4724770642201835,
+          "hit_rate_1y_vs_all_median": 0.46788990825688076,
           "dca_vs_lump_5y_pct": {
-            "n": 214,
-            "median": -1.53,
+            "n": 215,
+            "median": -1.57,
             "mean": -1.86,
             "p10": -12.99,
             "p90": 10.58,
@@ -2214,9 +2214,9 @@
             "unit": "percent"
           },
           "lump_5y_return_pct": {
-            "n": 214,
-            "median": 59.75,
-            "mean": 82.57,
+            "n": 215,
+            "median": 59.85,
+            "mean": 82.85,
             "p10": -18.24,
             "p90": 186.08,
             "min": -50.7,
@@ -2224,9 +2224,9 @@
             "unit": "percent"
           },
           "dca_5y_return_pct": {
-            "n": 214,
-            "median": 50.65,
-            "mean": 78.65,
+            "n": 215,
+            "median": 50.83,
+            "mean": 78.92,
             "p10": -14.58,
             "p90": 178.43,
             "min": -44.62,
@@ -2239,9 +2239,9 @@
           "band": "35-54",
           "n_months": 321,
           "fwd_1y_nominal": {
-            "n": 313,
-            "median": 6.89,
-            "mean": 14.3,
+            "n": 314,
+            "median": 7.02,
+            "mean": 14.32,
             "p10": -9.93,
             "p90": 44.15,
             "min": -34.61,
@@ -2249,9 +2249,9 @@
             "unit": "percent"
           },
           "fwd_1y_real": {
-            "n": 312,
-            "median": 3.34,
-            "mean": 9.36,
+            "n": 313,
+            "median": 3.36,
+            "mean": 9.42,
             "p10": -13.23,
             "p90": 36.87,
             "min": -40.99,
@@ -2259,9 +2259,9 @@
             "unit": "percent"
           },
           "maxdd_1y": {
-            "n": 313,
-            "median": -2.65,
-            "mean": -5.36,
+            "n": 314,
+            "median": -2.62,
+            "mean": -5.34,
             "p10": -13.94,
             "p90": 0.0,
             "min": -39.32,
@@ -2269,9 +2269,9 @@
             "unit": "percent"
           },
           "fwd_3y_nominal": {
-            "n": 294,
-            "median": 14.05,
-            "mean": 47.41,
+            "n": 295,
+            "median": 14.24,
+            "mean": 47.68,
             "p10": -22.72,
             "p90": 150.54,
             "min": -40.39,
@@ -2279,9 +2279,9 @@
             "unit": "percent"
           },
           "fwd_3y_real": {
-            "n": 292,
-            "median": 2.13,
-            "mean": 27.44,
+            "n": 293,
+            "median": 2.16,
+            "mean": 27.72,
             "p10": -29.02,
             "p90": 112.75,
             "min": -49.91,
@@ -2289,9 +2289,9 @@
             "unit": "percent"
           },
           "maxdd_3y": {
-            "n": 294,
-            "median": -6.98,
-            "mean": -10.08,
+            "n": 295,
+            "median": -6.91,
+            "mean": -10.05,
             "p10": -26.23,
             "p90": 0.0,
             "min": -53.33,
@@ -2329,19 +2329,19 @@
             "unit": "percent"
           },
           "fwd_10y_nominal": {
-            "n": 260,
-            "median": 57.57,
-            "mean": 120.14,
-            "p10": -27.17,
+            "n": 261,
+            "median": 57.72,
+            "mean": 120.55,
+            "p10": -26.8,
             "p90": 276.23,
             "min": -42.36,
             "max": 1052.5,
             "unit": "percent"
           },
           "fwd_10y_real": {
-            "n": 259,
-            "median": 25.28,
-            "mean": 51.54,
+            "n": 260,
+            "median": 25.35,
+            "mean": 51.87,
             "p10": -45.55,
             "p90": 182.1,
             "min": -63.45,
@@ -2349,16 +2349,16 @@
             "unit": "percent"
           },
           "maxdd_10y": {
-            "n": 260,
-            "median": -13.9,
-            "mean": -16.99,
-            "p10": -34.53,
+            "n": 261,
+            "median": -13.8,
+            "mean": -16.97,
+            "p10": -34.39,
             "p90": 0.0,
             "min": -55.7,
             "max": 0.0,
             "unit": "percent"
           },
-          "hit_rate_1y_vs_all_median": 0.5207667731629393,
+          "hit_rate_1y_vs_all_median": 0.5222929936305732,
           "dca_vs_lump_5y_pct": {
             "n": 274,
             "median": -1.9,
@@ -2393,7 +2393,7 @@
         "Unfavorable": {
           "zone": "Unfavorable",
           "band": "15-34",
-          "n_months": 108,
+          "n_months": 109,
           "fwd_1y_nominal": {
             "n": 104,
             "median": 2.65,
@@ -3022,11 +3022,11 @@
         "band": "40-59",
         "n_months": 404,
         "fwd_1y_nominal": {
-          "n": 401,
-          "median": 5.07,
-          "mean": 11.77,
+          "n": 402,
+          "median": 5.11,
+          "mean": 11.79,
           "p10": -12.35,
-          "p90": 40.4,
+          "p90": 39.42,
           "min": -36.39,
           "max": 197.36,
           "unit": "percent"
@@ -3042,9 +3042,9 @@
           "unit": "percent"
         },
         "maxdd_1y": {
-          "n": 401,
-          "median": -4.09,
-          "mean": -6.33,
+          "n": 402,
+          "median": -4.08,
+          "mean": -6.32,
           "p10": -15.25,
           "p90": 0.0,
           "min": -39.32,
@@ -3052,19 +3052,19 @@
           "unit": "percent"
         },
         "fwd_3y_nominal": {
-          "n": 393,
-          "median": 12.9,
-          "mean": 40.12,
+          "n": 394,
+          "median": 13.34,
+          "mean": 40.34,
           "p10": -24.09,
-          "p90": 117.6,
+          "p90": 117.97,
           "min": -40.39,
           "max": 411.36,
           "unit": "percent"
         },
         "fwd_3y_real": {
-          "n": 391,
-          "median": 2.09,
-          "mean": 22.13,
+          "n": 392,
+          "median": 2.13,
+          "mean": 22.36,
           "p10": -29.35,
           "p90": 95.21,
           "min": -49.91,
@@ -3072,9 +3072,9 @@
           "unit": "percent"
         },
         "maxdd_3y": {
-          "n": 393,
+          "n": 394,
           "median": -7.96,
-          "mean": -11.25,
+          "mean": -11.23,
           "p10": -30.62,
           "p90": 0.0,
           "min": -53.33,
@@ -3082,19 +3082,19 @@
           "unit": "percent"
         },
         "fwd_5y_nominal": {
-          "n": 370,
-          "median": 41.06,
-          "mean": 55.84,
-          "p10": -26.29,
+          "n": 371,
+          "median": 41.11,
+          "mean": 56.07,
+          "p10": -26.11,
           "p90": 158.87,
           "min": -55.11,
           "max": 289.47,
           "unit": "percent"
         },
         "fwd_5y_real": {
-          "n": 368,
-          "median": 17.72,
-          "mean": 25.99,
+          "n": 369,
+          "median": 17.78,
+          "mean": 26.2,
           "p10": -33.84,
           "p90": 115.36,
           "min": -66.87,
@@ -3102,19 +3102,19 @@
           "unit": "percent"
         },
         "maxdd_5y": {
-          "n": 370,
+          "n": 371,
           "median": -9.32,
-          "mean": -13.31,
-          "p10": -34.75,
+          "mean": -13.29,
+          "p10": -34.69,
           "p90": 0.0,
           "min": -55.64,
           "max": 0.0,
           "unit": "percent"
         },
         "fwd_10y_nominal": {
-          "n": 327,
-          "median": 76.4,
-          "mean": 123.71,
+          "n": 328,
+          "median": 77.08,
+          "mean": 124.02,
           "p10": -25.47,
           "p90": 288.79,
           "min": -43.55,
@@ -3122,9 +3122,9 @@
           "unit": "percent"
         },
         "fwd_10y_real": {
-          "n": 325,
-          "median": 25.77,
-          "mean": 53.39,
+          "n": 326,
+          "median": 25.97,
+          "mean": 53.65,
           "p10": -43.86,
           "p90": 183.24,
           "min": -64.27,
@@ -3132,41 +3132,41 @@
           "unit": "percent"
         },
         "maxdd_10y": {
-          "n": 327,
-          "median": -13.99,
-          "mean": -17.13,
+          "n": 328,
+          "median": -13.9,
+          "mean": -17.12,
           "p10": -35.35,
           "p90": 0.0,
           "min": -55.7,
           "max": 0.0,
           "unit": "percent"
         },
-        "hit_rate_1y_vs_all_median": 0.4837905236907731,
+        "hit_rate_1y_vs_all_median": 0.48258706467661694,
         "dca_vs_lump_5y_pct": {
-          "n": 370,
-          "median": -1.9,
+          "n": 371,
+          "median": -2.09,
           "mean": -3.06,
-          "p10": -14.25,
+          "p10": -14.12,
           "p90": 7.82,
           "min": -36.47,
           "max": 33.17,
           "unit": "percent"
         },
         "lump_5y_return_pct": {
-          "n": 370,
-          "median": 41.06,
-          "mean": 55.84,
-          "p10": -26.29,
+          "n": 371,
+          "median": 41.11,
+          "mean": 56.07,
+          "p10": -26.11,
           "p90": 158.87,
           "min": -55.11,
           "max": 289.47,
           "unit": "percent"
         },
         "dca_5y_return_pct": {
-          "n": 370,
-          "median": 40.56,
-          "mean": 48.68,
-          "p10": -26.14,
+          "n": 371,
+          "median": 40.87,
+          "mean": 48.92,
+          "p10": -26.07,
           "p90": 143.54,
           "min": -49.65,
           "max": 327.51,
@@ -3176,7 +3176,7 @@
       "Unfavorable": {
         "zone": "Unfavorable",
         "band": "20-39",
-        "n_months": 150,
+        "n_months": 151,
         "fwd_1y_nominal": {
           "n": 141,
           "median": 6.45,
@@ -3188,9 +3188,9 @@
           "unit": "percent"
         },
         "fwd_1y_real": {
-          "n": 139,
-          "median": 2.42,
-          "mean": 6.13,
+          "n": 140,
+          "median": 2.47,
+          "mean": 6.28,
           "p10": -19.05,
           "p90": 35.56,
           "min": -36.25,
