@@ -80,7 +80,7 @@ EVIDENCE_GRADES = {
 # Engine build: bumped on every implementation change that alters output.
 # Published in latest.json and the daily archive so readings from
 # different engines are distinguishable (verification wave 2026-08-12).
-ENGINE_BUILD = "2026-08-12"
+ENGINE_BUILD = "2026-10-22"  # retail premiums part: whole basket, one unit by check or wire (was 2026-08-12)
 
 # Zones per DESIGN 1.4 (Marc-validated)
 ZONES = [
@@ -623,14 +623,20 @@ def pillar_volatility(as_of: date, gvz: list[tuple[date, float]]) -> dict:
 
 
 # ---------------------------------------------------------------------------
-# Pillar 7 - Retail premiums (DESIGN 1.2 #7; EVIDENCE-BASE §7)
-# Own daily data collected by scripts/collect_premiums.js since 2026-08-04.
-# For v1 we parse SD Bullion records (JM Bullion + APMEX blocked as of
-# 2026-08-04 - stealth layer TODO). Premium % = median across products of
-# (product_price − spot) / spot × 100. Daily percentile rank (once we have
-# enough history) → INVERT (high premium = mechanically worse all-in price).
-# Ramp per task spec: <90d = drop (weight redistributed); 90d–12mo = 5% weight;
-# ≥12mo = 10% weight. Predictive claim NOT made (cost argument only).
+# Pillar 7 - Retail premiums (DESIGN 1.2 #7; EVIDENCE-BASE section 7)
+# Own daily captures by scripts/collect_premiums.js since 2026-08-04 (18
+# product pages, 7 dealers). Engine build 2026-10-22: the premium of the day
+# is the measure of record of premium_basket.py (decisions Marc 2026-09-29,
+# docs/specs/2026-09-29-premium-part-measure.md): on each page the price of
+# ONE unit paid by check or wire, against the spot shown on the same page,
+# products in stock only, grouped by kind (Eagle, Maple Leaf, 1 oz bar): the
+# middle dealer of each kind, then the mean of the kinds. Fewer than 4 dealers
+# or 2 kinds: no reading that day. Daily percentile rank within the part's own
+# history, inverted (high premium = worse all-in price). Weight ramp: 0 before
+# 90 days of record, then continuous growth (resolve_premium_weight).
+# Before 2026-10-22 the engine counted one dealer (SD Bullion, 3 pages, lowest
+# price in a band): that reader stays below as *_v1, read by premium_basket.py
+# for the side-by-side file only. Predictive claim NOT made (cost argument).
 # ---------------------------------------------------------------------------
 
 def _load_real_spot() -> dict[str, float]:
@@ -654,9 +660,11 @@ def _load_real_spot() -> dict[str, float]:
 _REAL_SPOT_CACHE: dict[str, float] | None = None
 
 
-def _parse_premium_day(path: Path) -> dict | None:
-    """Parse one daily JSONL file and return {date, median_premium_pct,
-    products_used, denominator info} or None if unparsable."""
+def _parse_premium_day_v1(path: Path) -> dict | None:
+    """Engine build 2026-08-12 reader, ONE dealer (SD Bullion), lowest price
+    of the page in a band over the futures, re-based on the spot of the day.
+    Not used by the engine since build 2026-10-22; premium_basket.py reads it
+    to keep the old figure beside the new one in the internal file."""
     global _REAL_SPOT_CACHE
     if _REAL_SPOT_CACHE is None:
         _REAL_SPOT_CACHE = _load_real_spot()
@@ -726,14 +734,44 @@ def _parse_premium_day(path: Path) -> dict | None:
     }
 
 
-def _load_premium_history() -> list[dict]:
+def _load_premium_history_v1() -> list[dict]:
+    """The one-dealer series (engine build 2026-08-12), for comparison only."""
     if not PREMIUMS.exists():
         return []
     out = []
     for p in sorted(PREMIUMS.glob("*.jsonl")):
-        parsed = _parse_premium_day(p)
+        parsed = _parse_premium_day_v1(p)
         if parsed:
             out.append(parsed)
+    return out
+
+
+def _load_premium_history() -> list[dict]:
+    """The premium of each stored day, measured on the whole basket by
+    premium_basket.measure_day (engine build 2026-10-22): one unit by check
+    or wire on each page, against the spot shown on that page, products in
+    stock only, by kind of product. A day whose capture gives fewer than 4
+    dealers or 2 kinds has no reading and is absent from the series, so the
+    90-day ramp counts days with a reading, not calendar days."""
+    if not PREMIUMS.exists():
+        return []
+    here = str(Path(__file__).resolve().parent)
+    if here not in sys.path:
+        sys.path.insert(0, here)
+    from premium_basket import measure_day  # same directory, reads stored captures only
+    out = []
+    for p in sorted(PREMIUMS.glob("20*.jsonl")):
+        d = measure_day(p)
+        if not d or d.get("measure_pct") is None:
+            continue
+        out.append({
+            "date": date.fromisoformat(d["date"]),
+            "median_premium_pct": float(d["measure_pct"]),
+            "products_used": d["pages_with_a_premium"],
+            "dealers_used": len(d["dealers"]),
+            "denominator": "spot shown on each page",
+            "futures_gcf_usd_toz": d["futures_at_capture"],
+        })
     return out
 
 
@@ -759,7 +797,7 @@ def pillar_premiums(as_of: date, premium_hist: list[dict]) -> dict:
             "name": label,
             "available": False,
             "reason": f"insufficient history ({history_days} days < {MIN_HISTORY_POINTS_PREMIUMS})",
-        "source": "The Gold Barometer premium collector (7-dealer basket)",
+        "source": "The Gold Barometer premium collector (7 dealers, one unit by check or wire)",
         "frequency": "daily",
         "ramping": True,
         "min_history_days": MIN_HISTORY_POINTS_PREMIUMS,
@@ -773,7 +811,7 @@ def pillar_premiums(as_of: date, premium_hist: list[dict]) -> dict:
     return _pillar_output(label, subscore,
                           latest_date=latest["date"], latest_value=latest["median_premium_pct"],
                           unit="%",
-                          source="The Gold Barometer Retail Premium Index (own daily capture, SD Bullion)",
+                          source="The Gold Barometer Retail Premium Index (own daily capture, 7 dealers, one unit by check or wire)",
                           frequency="daily", staleness=stale,
                           stale_limit=STALENESS_LIMITS_DAYS["daily"],
                           history_points=history_days,
@@ -873,9 +911,30 @@ def compute_composite(as_of: date, bundle: dict, spot_now: float | None = None,
     premium_hist_days = len(premium_history or [])
     nominal = dict(BASE_WEIGHTS)
     nominal["premiums"] = resolve_premium_weight(as_of, available["premiums"], premium_hist_days)
-    # Force-drop premiums if nominal weight is 0
+    # Force-drop premiums if nominal weight is 0. At exactly 90 readings the
+    # pillar has enough history to be scored but the ramp still gives it no
+    # weight (it leaves zero at the 91st reading): publish it as observed, not
+    # scored, like the days before, so pillars_used, the pillar flag and the
+    # pages agree (found by hand 2026-11-02, the day before first effect).
     if nominal["premiums"] == 0:
         available["premiums"] = False
+        p = pillars["premiums"]
+        if p.get("available"):
+            pillars["premiums"] = {
+                "name": "premiums",
+                "available": False,
+                "reason": (f"ramp weight 0 ({premium_hist_days} days of record; "
+                           f"the weight leaves zero at reading {PREMIUM_RAMP_MIN_DAYS + 1})"),
+                "source": "The Gold Barometer premium collector (7 dealers, one unit by check or wire)",
+                "frequency": "daily",
+                "ramping": True,
+                "min_history_days": MIN_HISTORY_POINTS_PREMIUMS,
+                "latest_date": p.get("latest_date"),
+                "latest_premium_pct": (round(p["latest_value"], 3)
+                                       if isinstance(p.get("latest_value"), (int, float)) else None),
+                "history_days": premium_hist_days,
+                "note": "Pillar is being observed but not scored until its ramp weight leaves zero.",
+            }
     effective = renormalize(nominal, available)
 
     # Weighted composite
@@ -1199,7 +1258,7 @@ def main():
 
     hist_csv = OUTPUT / "history.csv"
     with hist_csv.open("w", newline="") as fh:
-        w = csv.writer(fh)
+        w = csv.writer(fh, lineterminator="\n")
         w.writerow(["date", "score", "zone", "version", "pillars_used", "backfilled"])
         for r in all_rows:
             w.writerow([r["date"], r["score"], r["zone"], r["version"],

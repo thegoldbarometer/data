@@ -944,7 +944,7 @@ def write_outputs(results: dict) -> None:
     # 1) monthly_scores.csv
     p_csv = OUTPUT / "monthly_scores.csv"
     with p_csv.open("w", newline="") as fh:
-        w = csv.writer(fh)
+        w = csv.writer(fh, lineterminator="\n")
         w.writerow(["date", "score", "pillars_used",
                     "real_rates", "entry_price", "structural_demand",
                     "dollar", "positioning", "volatility",
@@ -985,7 +985,7 @@ def write_outputs(results: dict) -> None:
     # 2) band_stats.csv (buyer view)
     p_band = OUTPUT / "band_stats.csv"
     with p_band.open("w", newline="") as fh:
-        w = csv.writer(fh)
+        w = csv.writer(fh, lineterminator="\n")
         cols = ["zone", "band", "n_months",
                 "median_fwd_1y_pct", "median_fwd_3y_pct", "median_fwd_5y_pct", "median_fwd_10y_pct",
                 "median_fwd_1y_real_pct", "median_fwd_5y_real_pct",
@@ -1026,7 +1026,7 @@ def write_outputs(results: dict) -> None:
     # 3) band_stats_seller.csv (dual reading)
     p_seller = OUTPUT / "band_stats_seller.csv"
     with p_seller.open("w", newline="") as fh:
-        w = csv.writer(fh)
+        w = csv.writer(fh, lineterminator="\n")
         w.writerow(["zone", "band", "n_months",
                     "opportunity_cost_selling_median_1y_pct",
                     "opportunity_cost_selling_median_3y_pct",
@@ -1048,7 +1048,7 @@ def write_outputs(results: dict) -> None:
     # 4) failures.csv
     p_fail = OUTPUT / "failures_2022_2024.csv"
     with p_fail.open("w", newline="") as fh:
-        w = csv.writer(fh)
+        w = csv.writer(fh, lineterminator="\n")
         w.writerow(["date", "score", "zone", "real_rates_subscore", "fwd_1y_nominal_pct"])
         for row in results["failures"]["regime_break_2022_2024_monthly"]:
             w.writerow([row["date"], row["score"], row["zone"],
@@ -1058,7 +1058,7 @@ def write_outputs(results: dict) -> None:
     # 5) robustness.csv
     p_rob = OUTPUT / "robustness_band_edges.csv"
     with p_rob.open("w", newline="") as fh:
-        w = csv.writer(fh)
+        w = csv.writer(fh, lineterminator="\n")
         w.writerow(["variant", "zone", "n_months", "median_fwd_1y_pct", "median_fwd_5y_pct"])
         for variant, stats in results["robustness"]["band_edges"].items():
             for name, entry in stats.items():

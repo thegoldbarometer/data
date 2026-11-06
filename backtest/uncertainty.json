@@ -1,6 +1,6 @@
 {
   "note": "Stationary bootstrap, mean block = horizon, 10000 draws, seed fixed. Computed by scripts/backtest/uncertainty.py. Published on the site at /methodology/ section 8.",
-  "record_months": 669,
+  "record_months": 670,
   "zones": [
     {
       "zone": "Favorable",
@@ -400,19 +400,19 @@
       "horizons": [
         {
           "horizon": "1y nominal",
-          "n_months_with_data": 377,
-          "n_nonoverlapping_windows": 31.42,
+          "n_months_with_data": 378,
+          "n_nonoverlapping_windows": 31.5,
           "median_pct": 6.5,
           "ci90_pct": [
-            0.4,
+            0.5,
             15.6
           ]
         },
         {
           "horizon": "5y nominal",
-          "n_months_with_data": 346,
-          "n_nonoverlapping_windows": 5.77,
-          "median_pct": 43.9,
+          "n_months_with_data": 347,
+          "n_nonoverlapping_windows": 5.78,
+          "median_pct": 44.0,
           "ci90_pct": [
             4.3,
             80.8
@@ -420,9 +420,9 @@
         },
         {
           "horizon": "5y real",
-          "n_months_with_data": 344,
-          "n_nonoverlapping_windows": 5.73,
-          "median_pct": 19.8,
+          "n_months_with_data": 345,
+          "n_nonoverlapping_windows": 5.75,
+          "median_pct": 20.2,
           "ci90_pct": [
             -10.8,
             41.0
@@ -432,7 +432,7 @@
     },
     {
       "zone": "Unfavorable",
-      "n_months": 153,
+      "n_months": 154,
       "n_episodes": 21,
       "episodes": [
         {
@@ -537,8 +537,8 @@
         },
         {
           "from": "2026-03",
-          "to": "2026-09",
-          "months": 7
+          "to": "2026-10",
+          "months": 8
         }
       ],
       "horizons": [
@@ -558,8 +558,8 @@
           "n_nonoverlapping_windows": 2.1,
           "median_pct": -0.2,
           "ci90_pct": [
-            -11.3,
-            7.9
+            -11.5,
+            8.0
           ]
         },
         {
@@ -607,7 +607,7 @@
           "n_nonoverlapping_windows": 2.25,
           "median_pct": 9.7,
           "ci90_pct": [
-            -12.0,
+            -8.5,
             58.5
           ]
         },
@@ -634,8 +634,8 @@
     "what": "Favorable minus Unfavorable, median 5y real",
     "point_pct": 64.3,
     "ci90_pct": [
-      37.5,
-      119.9
+      36.7,
+      119.8
     ],
     "share_of_draws_positive_pct": 100.0
   }
