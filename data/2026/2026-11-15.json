@@ -1,0 +1,202 @@
+{
+  "date": "2026-11-15",
+  "score": 36,
+  "score_precise": 35.938,
+  "zone": "Unfavorable",
+  "version": "1.0",
+  "engine_build": "2026-10-22",
+  "api_version": 1,
+  "pillars_used": 6,
+  "pillars_total": 7,
+  "weights_nominal": {
+    "real_rates": 25,
+    "entry_price": 20,
+    "structural_demand": 15,
+    "dollar": 10,
+    "positioning": 10,
+    "volatility": 10,
+    "premiums": 0.24
+  },
+  "weights_effective": {
+    "real_rates": 31.1565,
+    "entry_price": 24.9252,
+    "structural_demand": 18.6939,
+    "dollar": 12.4626,
+    "positioning": 0.0,
+    "volatility": 12.4626,
+    "premiums": 0.2991
+  },
+  "pillars": {
+    "real_rates": {
+      "name": "real_rates",
+      "available": true,
+      "subscore": 36.2,
+      "latest_date": "2026-11-12",
+      "latest_value": 2.66,
+      "unit": "%",
+      "source": "TIPS 10Y (H.15)",
+      "frequency": "daily",
+      "staleness_days": 3,
+      "stale_limit_days": 7,
+      "history_points": 779,
+      "publishable_raw": true,
+      "notes": "Lower real rates historically preceded better long-term gold returns (EVIDENCE-BASE.md \u00a71). 2022+ regime break published separately.",
+      "weight_nominal": 25,
+      "weight_effective": 31.1565,
+      "evidence_grade": "strong (documented 2022 regime-break caveat)",
+      "staleness_flag": "fresh"
+    },
+    "entry_price": {
+      "name": "entry_price",
+      "available": true,
+      "subscore": 43.6,
+      "latest_date": "2026-10-31",
+      "latest_value": 4105.0,
+      "unit": "USD/toz (WB monthly)",
+      "source": "World Bank Pink Sheet (CC BY 4.0)",
+      "frequency": "monthly",
+      "staleness_days": 15,
+      "stale_limit_days": 45,
+      "history_points": 802,
+      "publishable_raw": true,
+      "sub_signals": {
+        "trend": {
+          "subscore": 85.76,
+          "dev_vs_12m_ma_pct": -12.85,
+          "return_12m_pct": -4.98,
+          "ma_window": "12 months (monthly proxy for 200dma; daily gold history not in pipeline v1)",
+          "spot_used_usd_toz": 3883.36
+        },
+        "valuation": {
+          "subscore": 1.44,
+          "real_price_percentile": 98.56,
+          "deflator": "US CPI-U (CUSR0000SA0), same-month",
+          "reference": "Erb & Harvey golden constant"
+        }
+      },
+      "weight_nominal": 20,
+      "weight_effective": 24.9252,
+      "evidence_grade": "strong (Moskowitz\u2013Ooi\u2013Pedersen momentum; Erb\u2013Harvey valuation)",
+      "staleness_flag": "fresh"
+    },
+    "structural_demand": {
+      "name": "structural_demand",
+      "available": true,
+      "subscore": 45.08,
+      "latest_date": "2026-11-12",
+      "latest_value": null,
+      "unit": "12m change of holdings",
+      "source": "IMF IRFCL (central bank reserves) + SPDR GLD tonnes (fund holdings)",
+      "frequency": "mixed",
+      "staleness_days": 3,
+      "stale_limit_days": 45,
+      "history_points": 304,
+      "publishable_raw": true,
+      "sub_signals": {
+        "cb_purchases": {
+          "available": true,
+          "subscore": 49.84,
+          "percentile": 49.84,
+          "change_12m_pct": 0.86,
+          "latest_date": "2026-10-31",
+          "prior_date": "2025-10-31",
+          "staleness_days": 15,
+          "history_points": 304
+        },
+        "etf_flows": {
+          "available": true,
+          "subscore": 40.32,
+          "percentile": 40.32,
+          "change_12m_pct": -0.568,
+          "latest_date": "2026-11-12",
+          "prior_date": "2025-11-12",
+          "staleness_days": 3,
+          "history_points": 253
+        }
+      },
+      "weight_nominal": 15,
+      "weight_effective": 18.6939,
+      "evidence_grade": "strong for central banks, weak for ETF flows",
+      "staleness_flag": "fresh"
+    },
+    "dollar": {
+      "name": "dollar",
+      "available": true,
+      "subscore": 34.11,
+      "latest_date": "2026-11-06",
+      "latest_value": 121.5061,
+      "unit": "index (H.10 broad)",
+      "source": "Board of Governors of the Federal Reserve System (H.10)",
+      "frequency": "weekly release",
+      "staleness_days": 9,
+      "stale_limit_days": 14,
+      "history_points": 5227,
+      "publishable_raw": true,
+      "notes": "Numeraire caveat (Pukthuanthong\u2013Roll) published on /methodology/.",
+      "weight_nominal": 10,
+      "weight_effective": 12.4626,
+      "evidence_grade": "moderate (numeraire caveat)",
+      "staleness_flag": "aging"
+    },
+    "positioning": {
+      "name": "positioning",
+      "available": false,
+      "reason": "stale (12d)",
+      "latest_date": "2026-11-03",
+      "weight_nominal": 10,
+      "weight_effective": 0.0,
+      "evidence_grade": "weak-to-moderate (contrarian at extremes only)",
+      "staleness_flag": "dropped"
+    },
+    "volatility": {
+      "name": "volatility",
+      "available": true,
+      "subscore": 8.75,
+      "percentile": 91.25,
+      "latest_date": "2026-11-13",
+      "staleness_days": 2,
+      "stale_limit_days": 7,
+      "history_points": 4314,
+      "source": "Cboe Gold Volatility Index (GVZ), licensed series, published as a score only",
+      "frequency": "daily",
+      "publishable_raw": false,
+      "notes": "Percentile rank is non-reversible without our full internal history (DATA-RIGHTS hard constraint). Raw GVZ values are not published.",
+      "weight_nominal": 10,
+      "weight_effective": 12.4626,
+      "evidence_grade": "weak - risk/entry-quality gauge with no predictive claim",
+      "staleness_flag": "fresh"
+    },
+    "premiums": {
+      "name": "premiums",
+      "available": true,
+      "subscore": 7.77,
+      "latest_date": "2026-11-15",
+      "latest_value": null,
+      "unit": "%",
+      "source": "The Gold Barometer Retail Premium Index (own daily capture, 7 dealers, one unit by check or wire)",
+      "frequency": "daily",
+      "staleness_days": 0,
+      "stale_limit_days": 7,
+      "history_points": 103,
+      "publishable_raw": false,
+      "notes": "Published as a derived aggregate only (DATA-RIGHTS).",
+      "weight_nominal": 0.24,
+      "weight_effective": 0.2991,
+      "evidence_grade": "cost argument incontestable; predictive value anecdotal",
+      "staleness_flag": "fresh",
+      "latest_value_redacted": "internal-only per our data-rights policy"
+    }
+  },
+  "about": {
+    "publisher": "The Gold Barometer",
+    "site": "https://thegoldbarometer.com/",
+    "methodology": "https://thegoldbarometer.com/methodology/",
+    "license": "CC BY 4.0",
+    "credit": "Source: The Gold Barometer, thegoldbarometer.com"
+  },
+  "alerts": {
+    "what": "One free email each time the reading moves to a new zone, in either direction. No other mail.",
+    "url": "https://thegoldbarometer.com/alerts/"
+  },
+  "_note": "Immutable daily archive. GVZ raw values are internal-only per docs/DATA-RIGHTS.md; the volatility pillar publishes only the non-reversible sub-score/percentile."
+}
